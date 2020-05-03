@@ -17,12 +17,15 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   backgroundImage?: string
   border?: string
   borderRadius?: string
+  bottom?: ResponsiveSize
   boxShadow?: string
   color?: string
+  cursor?: string
   display?: string
   fontSize?: ResponsiveFontSize
   fontWeight?: string | number
   height?: ResponsiveSize
+  left?: ResponsiveSize
   m?: ResponsiveSpace
   mt?: ResponsiveSpace
   mr?: ResponsiveSpace
@@ -41,9 +44,14 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   px?: ResponsiveSpace
   position?: string
   ref?: React.Ref<any>
+  right?: ResponsiveSize
+  textAlign?: string
+  textDecoration?: string
   to?: string
+  top?: ResponsiveSize
   width?: ResponsiveSize
   variant?: string
+  zIndex?: string | number
 }
 
 const baseStyles = css`

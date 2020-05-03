@@ -22,12 +22,19 @@ const styleConfig: StyleConfig = {
     name: 'border-radius',
     transformer: sizeTransformer
   },
+  bottom: {
+    name: 'bottom',
+    transformer: sizeTransformer
+  },
   boxShadow: {
     name: 'box-shadow'
   },
   color: {
     name: 'color',
     transformer: colorTransformer
+  },
+  cursor: {
+    name: 'cursor'
   },
   display: {
     name: 'display'
@@ -42,6 +49,10 @@ const styleConfig: StyleConfig = {
   },
   height: {
     name: 'height',
+    transformer: sizeTransformer
+  },
+  left: {
+    name: 'left',
     transformer: sizeTransformer
   },
   m: {
@@ -111,9 +122,26 @@ const styleConfig: StyleConfig = {
   position: {
     name: 'position'
   },
+  right: {
+    name: 'right',
+    transformer: sizeTransformer
+  },
+  textAlign: {
+    name: 'text-align'
+  },
+  textDecoration: {
+    name: 'text-decoration'
+  },
+  top: {
+    name: 'top',
+    transformer: sizeTransformer
+  },
   width: {
     name: 'width',
     transformer: sizeTransformer
+  },
+  zIndex: {
+    name: 'z-index'
   }
 }
 

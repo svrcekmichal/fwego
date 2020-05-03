@@ -8,7 +8,7 @@ import type {
 import type { Space, Spaces } from '../../theme/spaces'
 import type { Theme } from '../../theme/theme'
 
-export function toSizeUnit(propertyValue: string | number): string {
+export function toSizeUnit(propertyValue: Size): string {
   if (
     typeof propertyValue === 'number' &&
     propertyValue >= 0 &&
@@ -26,17 +26,19 @@ export function sizeTransformer(propertyValue: Size): string {
   return toSizeUnit(propertyValue)
 }
 
-export function toSpaceUnit(space: Space | string, spaces: Spaces): string {
-  if (space === 'none') {
-    return '0px'
+function isSpace(space: Space | Size, spaces: Spaces): space is Space {
+  return !!spaces[space as Space]
+}
+
+export function toSpaceUnit(space: Space | Size, spaces: Spaces): string {
+  if (isSpace(space, spaces)) {
+    return spaces[space]
   }
-  // TODO @ben fix
-  // @ts-ignore
-  return spaces[space] || toSizeUnit(space)
+  return toSizeUnit(space)
 }
 
 export function spaceTransformer(
-  propertyValue: Space | string,
+  propertyValue: Space | Size,
   theme?: Theme
 ): string {
   return toSpaceUnit(propertyValue, theme?.spaces)

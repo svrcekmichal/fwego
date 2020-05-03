@@ -125,3 +125,24 @@ export const Spacing: React.FC<any> = () => {
     </Flex>
   )
 }
+
+const ResponsiveSpacingBox: React.FC<any> = ({ children, ...props }: any) => {
+  return (
+    <Box bg="primary" color="white" width="175" height="175" {...props}>
+      {children}
+    </Box>
+  )
+}
+
+export const ResponsiveSpacing: React.FC<any> = () => {
+  return (
+    <Flex>
+      <ResponsiveSpacingBox p={['none', 'small', 'medium', 'large']}>
+        <Text>p=&#123;{"['none', 'small', 'medium',  'large']"}&#125;</Text>
+      </ResponsiveSpacingBox>
+      <ResponsiveSpacingBox m={['xsmall', 'medium', 'xlarge']}>
+        <Text>m=&#123;{"['xsmall', 'medium', 'xlarge']"}&#125;</Text>
+      </ResponsiveSpacingBox>
+    </Flex>
+  )
+}

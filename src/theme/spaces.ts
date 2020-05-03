@@ -1,4 +1,5 @@
 export interface Spaces {
+  none: string
   xxsmall: string
   xsmall: string
   small: string
@@ -8,9 +9,10 @@ export interface Spaces {
   xxlarge: string
 }
 
-export type Space = keyof Spaces | 'none'
+export type Space = keyof Spaces
 
 const spaces: Spaces = {
+  none: '0px',
   xxsmall: '4px',
   xsmall: '8px',
   small: '12px',

@@ -19,6 +19,7 @@ export const Input: React.FC<InputProps> = forwardRef(
         py="xsmall"
         width="100%"
         ref={ref}
+        variant="input"
         {...props}
       />
     )

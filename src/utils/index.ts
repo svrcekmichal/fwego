@@ -83,7 +83,7 @@ export function combineCssProperties(
   const psuedo: Array<[string, Props]> = []
   const regular: Array<[string, string]> = []
   for (const k in styleProps) {
-    if (k.startsWith('&:')) {
+    if (k.match(/&:|::|:-/)) {
       psuedo.push([k, styleProps[k]])
     } else {
       regular.push([k, styleProps[k]])

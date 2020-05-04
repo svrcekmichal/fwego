@@ -106,10 +106,11 @@ const SpacingBox: React.FC<any> = ({ space, px }: any) => {
       width="150"
       height="150"
       p={space}
-      mr={space}
+      m={space}
+      border="1px solid white"
     >
       <Text>p=&quot;{space}&quot;</Text>
-      <Text>mr=&quot;{space}&quot;</Text>
+      <Text>m=&quot;{space}&quot;</Text>
       <Text>{px}</Text>
     </Box>
   )
@@ -118,7 +119,7 @@ const SpacingBox: React.FC<any> = ({ space, px }: any) => {
 export const Spacing: React.FC<any> = () => {
   const theme = useTheme()
   return (
-    <Flex>
+    <Flex flexWrap="wrap">
       {Object.entries(theme.spaces).map(([space, px]) => (
         <SpacingBox key={space} space={space} px={px} />
       ))}

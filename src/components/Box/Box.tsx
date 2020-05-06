@@ -39,6 +39,8 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   mx?: ResponsiveSpace
   minHeight?: ResponsiveSpace
   minWidth?: ResponsiveSpace
+  maxHeight?: ResponsiveSpace
+  maxWidth?: ResponsiveSpace
   overflow?: Overflow
   overflowX?: Overflow
   overflowY?: Overflow

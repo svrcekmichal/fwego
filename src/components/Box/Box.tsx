@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { css, cx } from '../../emotion'
+import { cx } from '../../emotion'
 import { useTheme } from '../../hooks'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
 import type { FontSize, FontWeight } from '../../theme/fonts'
@@ -19,9 +19,12 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   borderRadius?: string
   bottom?: ResponsiveSize
   boxShadow?: string
+  boxSizing?: string
   color?: string
   cursor?: string
   display?: string
+  fwcss?: { [key: string]: string }
+  fwelement?: string
   fontSize?: ResponsiveFontSize
   fontWeight?: FontWeight
   height?: ResponsiveSize
@@ -45,6 +48,7 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   position?: string
   ref?: React.Ref<any>
   right?: ResponsiveSize
+  size?: ResponsiveFontSize
   textAlign?: string
   textDecoration?: string
   to?: string
@@ -55,35 +59,53 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   zIndex?: string | number
 }
 
-const baseStyles = css`
-  display: block;
-  box-sizing: border-box;
-  min-width: 0px;
-`
+const fwBoxCss = {
+  display: 'block',
+  boxSizing: 'border-box',
+  minWidth: '0px'
+}
 
 export const Box: React.FC<BoxProps> = forwardRef(
   (
-    { as = 'div', children, className, variant, ...props }: BoxProps,
+    {
+      as = 'div',
+      children,
+      className,
+      fwcss = {},
+      fwelement,
+      variant,
+      ...props
+    }: BoxProps,
     ref: React.Ref<HTMLDivElement>
   ) => {
     const theme = useTheme()
     const Component = as
     const [forwardedProps, styleProps] = partitionStyleProps(props, styleConfig)
 
-    let stylePropsWithVariant = styleProps
-    if (variant && theme?.variants?.[variant]) {
-      const variantConfig = theme.variants[variant]
-      stylePropsWithVariant = { ...styleProps, ...variantConfig }
+    let elementStyles = {}
+    if (fwelement && theme[fwelement]) {
+      elementStyles = theme[fwelement]
     }
 
-    const cls = combineCssProperties(stylePropsWithVariant, styleConfig, theme)
+    let variantStyles = {}
+    if (variant && theme.variants?.[variant]) {
+      variantStyles = theme.variants[variant]
+    }
+
+    const cls = combineCssProperties(
+      {
+        ...fwBoxCss,
+        ...fwcss,
+        ...elementStyles,
+        ...variantStyles,
+        ...styleProps
+      },
+      styleConfig,
+      theme
+    )
 
     return (
-      <Component
-        ref={ref}
-        className={cx(baseStyles, className, cls)}
-        {...forwardedProps}
-      >
+      <Component ref={ref} className={cx(className, cls)} {...forwardedProps}>
         {children}
       </Component>
     )

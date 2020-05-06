@@ -42,19 +42,22 @@ export const headingConfig: {
   }
 }
 
+const fwcss = {
+  m: 'none',
+  weight: 'bold'
+}
+
 export const Heading: React.FC<HeadingProps> = forwardRef(
-  (
-    { children, level = '1', weight = 'bold', ...props }: HeadingProps,
-    ref: React.Ref<any>
-  ) => {
+  ({ children, level = '1', ...props }: HeadingProps, ref: React.Ref<any>) => {
     const { as, size } = headingConfig[level]
+
     return (
       <Text
         as={as}
         size={size}
-        weight={weight}
         ref={ref}
-        variant="heading"
+        fwcss={fwcss}
+        fwelement="heading"
         {...props}
       >
         {children}

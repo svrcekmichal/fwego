@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import { css, cx } from '../../emotion'
+import { cx } from '../../emotion'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
@@ -15,10 +15,6 @@ export interface FlexProps extends BoxProps {
   justifyContent?: string
   order?: string
 }
-
-const baseStyles = css`
-  display: flex;
-`
 
 const styleConfig = {
   alignItems: {
@@ -61,7 +57,8 @@ export const Flex: React.FC<FlexProps> = forwardRef(
     return (
       <Box
         ref={ref}
-        className={cx(baseStyles, cls, className)}
+        className={cx(cls, className)}
+        display="flex"
         {...forwardedProps}
       >
         {children}

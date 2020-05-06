@@ -12,7 +12,12 @@ const theme: Theme = {
   fontOffsets: fontOffsets,
   fontSizes: fontSizes,
   fontWeights: fontWeights,
-  spaces: spaces
+  spaces: spaces,
+  variants: {
+    primary: {
+      bg: '#ff7061'
+    }
+  }
 }
 
 export default theme

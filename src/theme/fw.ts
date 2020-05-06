@@ -3,12 +3,6 @@ import type { Theme } from './theme'
 const fontFamily =
   'Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif'
 
-const buttonBase = {
-  bg: 'transparent',
-  borderRadius: '18px',
-  fontFamily: fontFamily
-}
-
 const colors = {
   primaryGradient: 'linear-gradient(254deg, #f78361, #f54b64)',
   primary: '#ff7061',
@@ -47,40 +41,44 @@ const fwTheme: Theme = {
   colors: colors,
   fontSizes: fontSizes,
   fontOffsets: fontOffsets,
+  button: {
+    bg: 'transparent',
+    borderRadius: '18px',
+    fontFamily: fontFamily,
+    weight: 'semiBold'
+  },
+  input: {
+    bg: colors['blk1'],
+    borderRadius: '12px',
+    boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
+    color: 'white',
+    fontFamily: fontFamily,
+    '::placeholder': {
+      color: colors['gray5']
+    },
+    '&:focus': {
+      outline: 'none',
+      boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
+    }
+  },
+  text: {
+    fontFamily: fontFamily,
+    weight: 'medium'
+  },
+  heading: {
+    fontFamily: fontFamily,
+    weight: 'bold'
+  },
   variants: {
     primary: {
-      ...buttonBase,
       backgroundImage: colors['primaryGradient']
     },
     outline: {
-      ...buttonBase,
       boxShadow: `inset 0 0 0 1px #4b4b4b`,
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none'
       }
-    },
-    input: {
-      bg: colors['blk1'],
-      borderRadius: '12px',
-      boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
-      color: 'white',
-      fontFamily: fontFamily,
-      '::placeholder': {
-        color: colors['gray5']
-      },
-      '&:focus': {
-        outline: 'none',
-        boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
-      }
-    },
-    text: {
-      fontFamily: fontFamily,
-      weight: 'medium'
-    },
-    heading: {
-      fontFamily: fontFamily,
-      weight: 'extraBold'
     }
   }
 }

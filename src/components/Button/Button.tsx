@@ -7,36 +7,34 @@ export interface ButtonProps extends BoxProps {
   type?: 'submit' | 'button' | 'reset'
 }
 
+const fwcss = {
+  border: '0',
+  borderRadius: '3px',
+  color: 'white',
+  cursor: 'pointer',
+  display: 'inline-block',
+  size: 'small',
+  weight: 'bold',
+  px: 'medium',
+  py: 'xsmall',
+  textAlign: 'center',
+  textDecoration: 'none'
+}
+
 export const Button: React.FC<ButtonProps> = forwardRef(
   (
-    {
-      as = 'button',
-      children,
-      type = 'button',
-      variant = 'primary',
-      ...props
-    }: ButtonProps,
+    { as = 'button', children, type = 'button', ...props }: ButtonProps,
     ref: React.Ref<HTMLButtonElement>
   ) => {
     return (
       <Box
         as={as}
-        border="0"
-        borderRadius="3px"
-        bg={variant}
-        color="white"
-        cursor="pointer"
-        display="inline-block"
-        fontSize="small"
-        fontWeight="bold"
-        px="medium"
-        py="xsmall"
         ref={ref}
-        textAlign="center"
-        textDecoration="none"
         // @ts-ignore TODO @ben fix
         type={as === 'button' ? type : undefined}
-        variant={variant}
+        fwcss={fwcss}
+        fwelement="button"
+        variant="primary"
         {...props}
       >
         {children}

@@ -4,7 +4,7 @@ import type { FontSize } from '../../theme/fonts'
 
 export default function useBaselineStyles(
   baseline: boolean,
-  size: FontSize
+  size: FontSize = 'medium'
 ): string | undefined {
   const theme = useTheme()
 

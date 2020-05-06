@@ -18,7 +18,7 @@ const TextGrid: React.FC<{}> = () => {
         .map(([size, px]: any) => {
           return (
             <Text key={size} size={size}>
-              &lt;Text size=&#123;{size}&#125;&gt;{px} text&lt;/Text&gt;
+              Text size {size} {px}
             </Text>
           )
         })}

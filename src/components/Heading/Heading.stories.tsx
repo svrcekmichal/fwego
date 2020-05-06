@@ -14,7 +14,7 @@ const HeadingGrid: React.FC<{}> = () => {
       {Object.keys(headingConfig).map((level: any) => {
         return (
           <Heading key={level} level={level}>
-            &lt;Heading level=&#123;{level}&#125; /&gt;
+            Level {level} Heading
           </Heading>
         )
       })}

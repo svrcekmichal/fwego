@@ -29,6 +29,9 @@ const styleConfig: StyleConfig = {
   boxShadow: {
     name: 'box-shadow'
   },
+  boxSizing: {
+    name: 'box-sizing'
+  },
   color: {
     name: 'color',
     transformer: colorTransformer
@@ -128,6 +131,10 @@ const styleConfig: StyleConfig = {
   right: {
     name: 'right',
     transformer: sizeTransformer
+  },
+  size: {
+    name: 'font-size',
+    transformer: fontSizeTransformer
   },
   textAlign: {
     name: 'text-align'

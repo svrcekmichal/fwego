@@ -32,9 +32,10 @@ export const Text: React.FC<TextProps> = forwardRef(
         as={as}
         className={cx(baselineCls, className)}
         fontSize={size}
-        fontWeight={weight}
+        weight={weight}
         m={m}
         ref={ref}
+        variant="text"
         {...props}
       >
         {children}

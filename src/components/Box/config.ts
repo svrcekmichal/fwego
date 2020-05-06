@@ -39,6 +39,9 @@ const styleConfig: StyleConfig = {
   display: {
     name: 'display'
   },
+  fontFamily: {
+    name: 'font-family'
+  },
   fontSize: {
     name: 'font-size',
     transformer: fontSizeTransformer
@@ -135,6 +138,10 @@ const styleConfig: StyleConfig = {
   top: {
     name: 'top',
     transformer: sizeTransformer
+  },
+  weight: {
+    name: 'font-weight',
+    transformer: fontWeightTransformer
   },
   width: {
     name: 'width',

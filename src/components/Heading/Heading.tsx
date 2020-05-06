@@ -10,7 +10,7 @@ export interface HeadingProps extends TextProps {
   level?: Level
 }
 
-const headingConfig: {
+export const headingConfig: {
   [key in Level]: {
     as: HeadingLevel
     size: FontSize
@@ -44,12 +44,19 @@ const headingConfig: {
 
 export const Heading: React.FC<HeadingProps> = forwardRef(
   (
-    { children, level = '1', weight = 'normal', ...props }: HeadingProps,
+    { children, level = '1', weight = 'bold', ...props }: HeadingProps,
     ref: React.Ref<any>
   ) => {
     const { as, size } = headingConfig[level]
     return (
-      <Text as={as} size={size} weight={weight} ref={ref} {...props}>
+      <Text
+        as={as}
+        size={size}
+        weight={weight}
+        ref={ref}
+        variant="heading"
+        {...props}
+      >
         {children}
       </Text>
     )

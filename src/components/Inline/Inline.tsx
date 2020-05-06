@@ -16,7 +16,7 @@ export const Inline: React.FC<InlineProps> = forwardRef(
       align = 'left',
       children,
       className,
-      space = 'none',
+      space = 'medium',
       ...props
     }: InlineProps,
     ref: React.Ref<HTMLDivElement>

@@ -1,60 +1,63 @@
 import React from 'react'
-import { Box, Flex, Heading } from '../'
+import { FWThemeProvider } from '../../models'
+import { Box, Heading, Inline } from '../'
+import { headingConfig } from './Heading'
 
 export default {
   component: Heading,
   title: 'Heading'
 }
 
-export const Default: React.FC<{}> = () => {
+const HeadingGrid: React.FC<{}> = () => {
   return (
     <>
-      <Heading level="1">Heading 1</Heading>
-      <Heading level="2">Heading 2</Heading>
-      <Heading level="3">Heading 3</Heading>
-      <Heading level="4">Heading 4</Heading>
-      <Heading level="5">Heading 5</Heading>
-      <Heading level="6">Heading 6</Heading>
+      {Object.keys(headingConfig).map((level: any) => {
+        return (
+          <Heading key={level} level={level}>
+            &lt;Heading level=&#123;{level}&#125; /&gt;
+          </Heading>
+        )
+      })}
     </>
   )
 }
 
-export const Baseline: React.FC<{}> = () => {
+const BaselineGrid: React.FC<{}> = () => {
   return (
-    <Flex>
-      <Box>
-        <Heading baseline level="1">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="1">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="1">
-          Baseline Heading
-        </Heading>
-      </Box>
-      <Box>
-        <Heading baseline level="2">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="2">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="2">
-          Baseline Heading
-        </Heading>
-      </Box>
-      <Box>
-        <Heading baseline level="3">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="3">
-          Baseline Heading
-        </Heading>
-        <Heading baseline level="3">
-          Baseline Heading
-        </Heading>
-      </Box>
-    </Flex>
+    <Inline alignItems="flex-start">
+      {Object.keys(headingConfig).map((level: any) => (
+        <Box key={level}>
+          {new Array(3).fill(undefined).map((_, index) => (
+            <Heading key={index} baseline level={level}>
+              Baseline Heading
+            </Heading>
+          ))}
+        </Box>
+      ))}
+    </Inline>
+  )
+}
+
+export const Default: React.FC<{}> = () => {
+  return <HeadingGrid />
+}
+
+export const Baseline: React.FC<{}> = () => {
+  return <BaselineGrid />
+}
+
+export const FWTheme: React.FC<{}> = () => {
+  return (
+    <FWThemeProvider>
+      <HeadingGrid />
+    </FWThemeProvider>
+  )
+}
+
+export const FWThemeBaseline: React.FC<{}> = () => {
+  return (
+    <FWThemeProvider>
+      <BaselineGrid />
+    </FWThemeProvider>
   )
 }

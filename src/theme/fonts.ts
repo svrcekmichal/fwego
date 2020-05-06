@@ -1,5 +1,4 @@
 export interface FontSizes {
-  xxxsmall: string
   xxsmall: string
   xsmall: string
   small: string
@@ -13,7 +12,6 @@ export interface FontSizes {
 export type FontSize = keyof FontSizes
 
 export const fontSizes: FontSizes = {
-  xxxsmall: '8px',
   xxsmall: '10px',
   xsmall: '12px',
   small: '14px',
@@ -25,7 +23,6 @@ export const fontSizes: FontSizes = {
 }
 
 export const fontOffsets: { [key in FontSize]: [string, string] } = {
-  xxxsmall: ['1px', '2px'],
   xxsmall: ['1px', '3px'],
   xsmall: ['1px', '4px'],
   small: ['2px', '4px'],

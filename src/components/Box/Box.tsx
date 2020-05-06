@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import { css, cx } from '../../emotion'
 import { useTheme } from '../../hooks'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
-import type { FontSize } from '../../theme/fonts'
+import type { FontSize, FontWeight } from '../../theme/fonts'
 import type { Space } from '../../theme/spaces'
 import styleConfig from './config'
 
@@ -23,7 +23,7 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   cursor?: string
   display?: string
   fontSize?: ResponsiveFontSize
-  fontWeight?: string | number
+  fontWeight?: FontWeight
   height?: ResponsiveSize
   left?: ResponsiveSize
   m?: ResponsiveSpace
@@ -50,6 +50,7 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   to?: string
   top?: ResponsiveSize
   width?: ResponsiveSize
+  weight?: FontWeight
   variant?: string
   zIndex?: string | number
 }

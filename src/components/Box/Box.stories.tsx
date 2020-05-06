@@ -19,9 +19,9 @@ const ColorBox: React.FC<any> = ({ bg, children }: any) => {
       alignItems="center"
       justifyContent="center"
       bg={bg}
-      color="white"
       width="150"
       height="150"
+      textAlign="center"
     >
       {children}
     </Flex>
@@ -33,10 +33,13 @@ const ColorGrid: React.FC<{}> = () => {
   return (
     <Inline space="small">
       {Object.entries(theme.colors).map(([name, hex]) => {
+        const color = name === 'white' ? 'black' : 'white'
         return (
           <ColorBox key={name} bg={name}>
-            <Text mb="small">bg=&quot;{name}&quot;</Text>
-            <Text> {hex} </Text>
+            <Text color={color} mb="small">
+              bg=&quot;{name}&quot;
+            </Text>
+            <Text color={color}> {hex} </Text>
           </ColorBox>
         )
       })}

@@ -3,7 +3,8 @@ import { cx } from '../../emotion'
 import { useTheme } from '../../hooks'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
 import type { FontSize, FontWeight } from '../../theme/fonts'
-import type { Space } from '../../theme/spaces'
+import type { Space, } from '../../theme/spaces'
+import type { Overflow } from '../../theme/overflows'
 import styleConfig from './config'
 
 export type Size = string | number
@@ -38,6 +39,11 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   mx?: ResponsiveSpace
   minHeight?: ResponsiveSpace
   minWidth?: ResponsiveSpace
+  maxHeight?: ResponsiveSpace
+  maxWidth?: ResponsiveSpace
+  overflow?: Overflow
+  overflowX?: Overflow
+  overflowY?: Overflow
   p?: ResponsiveSpace
   pt?: ResponsiveSpace
   pr?: ResponsiveSpace

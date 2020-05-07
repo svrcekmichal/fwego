@@ -1,43 +1,62 @@
-// styles shape:
-// https://github.com/storybookjs/storybook/blob/master/addons/info/src/components/Story.js#L19
 import React from 'react'
 
-const TableComponent = ({ propDefinitions }) => {
-  const props = propDefinitions.map(
-    ({ property, propType, required, description, defaultValue }) => {
-      return (
-        <tr key={property}>
-          <td>
-            {property}
-            {required ? <span>*</span> : null}
-          </td>
-          <td>{propType.name}</td>
-          <td>{defaultValue}</td>
-          <td>{description}</td>
-        </tr>
-      )
-    }
-  )
+const tableStyles = {
+  borderCollapse: 'collapse',
+  marginTop: '0.25rem'
+}
 
+const cellStyles = {
+  border: '1px solid rgba(255, 255, 255, 0.2)',
+  color: 'rgba(255, 255, 255, 0.8)',
+  fontWeight: '400',
+  padding: '0.25rem',
+  textAlign: 'left',
+  verticalAlign: 'top'
+}
+
+const Th = ({ children }) => {
+  return <td style={cellStyles}>{children}</td>
+}
+
+const Td = ({ children }) => {
+  return <td style={cellStyles}>{children}</td>
+}
+
+const TableComponent = ({ propDefinitions }) => {
   return (
-    <table>
+    <table style={tableStyles}>
       <thead>
         <tr>
-          <th>name</th>
-          <th>type</th>
-          <th>default</th>
-          <th>description</th>
+          <Th>Property</Th>
+          <Th>PropType</Th>
+          <Th>Default</Th>
+          <Th>Description</Th>
         </tr>
       </thead>
-      <tbody>{props}</tbody>
+      <tbody>
+        {propDefinitions.map(
+          ({ property, propType, description, defaultValue }) => {
+            return (
+              <tr key={property}>
+                <Td>{property}</Td>
+                <Td>{propType.name}</Td>
+                <Td>{defaultValue}</Td>
+                <Td>{description}</Td>
+              </tr>
+            )
+          }
+        )}
+      </tbody>
     </table>
   )
 }
 
 export default {
-  // TableComponent: TableComponent,
+  TableComponent: TableComponent,
   inline: true,
   styles: {
+    // styles shape:
+    // https://github.com/storybookjs/storybook/blob/master/addons/info/src/components/Story.js#L19
     button: {
       base: {
         fontFamily: 'sans-serif',

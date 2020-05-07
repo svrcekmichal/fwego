@@ -12,7 +12,7 @@ export default {
   }
 }
 
-const HeadingGrid: React.FC<{}> = () => {
+export const Default: React.FC<{}> = () => {
   return (
     <>
       {Object.keys(headingConfig).map((level: any) => {
@@ -26,7 +26,7 @@ const HeadingGrid: React.FC<{}> = () => {
   )
 }
 
-const BaselineGrid: React.FC<{}> = () => {
+export const Baseline: React.FC<{}> = () => {
   return (
     <Inline alignItems="flex-start">
       {Object.keys(headingConfig).map((level: any) => (
@@ -42,18 +42,16 @@ const BaselineGrid: React.FC<{}> = () => {
   )
 }
 
-export const Default: React.FC<{}> = () => {
-  return <HeadingGrid />
-}
-
-export const Baseline: React.FC<{}> = () => {
-  return <BaselineGrid />
-}
-
 export const FWTheme: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      <HeadingGrid />
+      {Object.keys(headingConfig).map((level: any) => {
+        return (
+          <Heading key={level} level={level}>
+            Level {level} Heading
+          </Heading>
+        )
+      })}
     </FWThemeProvider>
   )
 }
@@ -61,7 +59,17 @@ export const FWTheme: React.FC<{}> = () => {
 export const FWThemeBaseline: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      <BaselineGrid />
+      <Inline alignItems="flex-start">
+        {Object.keys(headingConfig).map((level: any) => (
+          <Box key={level}>
+            {new Array(3).fill(undefined).map((_, index) => (
+              <Heading key={index} baseline level={level}>
+                Baseline Heading
+              </Heading>
+            ))}
+          </Box>
+        ))}
+      </Inline>
     </FWThemeProvider>
   )
 }

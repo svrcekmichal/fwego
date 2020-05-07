@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTheme } from '../../hooks'
-import monkeyPatchedFWTheme from '../../hooks/useMonkeyPatchedFWTheme'
 import { FWThemeProvider } from '../../models'
 import { Text } from '../'
 import infoAddOn from '../../../.storybook/infoAddOn'
+import fwThemeDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDoNotUseOutsideStorybook'
 
 export default {
   component: Text,
@@ -34,7 +34,7 @@ export const Default: React.FC<{}> = () => {
 export const FWTheme: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      {Object.entries(monkeyPatchedFWTheme.fontSizes)
+      {Object.entries(fwThemeDoNotUseOutsideStorybook.fontSizes)
         .slice()
         .reverse()
         .map(([size, px]: any) => {

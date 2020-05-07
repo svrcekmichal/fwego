@@ -1,10 +1,14 @@
 import React from 'react'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Button, Inline } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Button,
-  title: 'Button'
+  title: 'Button',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
 export const Default: React.FC<{}> = () => {

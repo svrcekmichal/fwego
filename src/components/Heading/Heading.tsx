@@ -66,4 +66,4 @@ export const Heading: React.FC<HeadingProps> = forwardRef(
   }
 )
 
-Heading.displayName = 'FWHeading'
+Heading.displayName = 'Heading'

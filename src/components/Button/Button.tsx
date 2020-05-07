@@ -43,4 +43,4 @@ export const Button: React.FC<ButtonProps> = forwardRef(
   }
 )
 
-Button.displayName = 'FWButton'
+Button.displayName = 'Button'

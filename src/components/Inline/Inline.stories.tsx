@@ -1,10 +1,14 @@
 import React from 'react'
 import { useTheme } from '../../hooks'
 import { Inline, Flex, Text } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Inline,
-  title: 'Inline'
+  title: 'Inline',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
 const InlineBox: React.FC<any> = ({ space, px }: any) => {

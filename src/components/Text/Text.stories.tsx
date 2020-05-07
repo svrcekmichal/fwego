@@ -2,13 +2,18 @@ import React from 'react'
 import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models'
 import { Text } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
+import fwThemeDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDoNotUseOutsideStorybook'
 
 export default {
   component: Text,
-  title: 'Text'
+  title: 'Text',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
-const TextGrid: React.FC<{}> = () => {
+export const Default: React.FC<{}> = () => {
   const theme = useTheme()
   return (
     <>
@@ -26,14 +31,19 @@ const TextGrid: React.FC<{}> = () => {
   )
 }
 
-export const Default: React.FC<{}> = () => {
-  return <TextGrid />
-}
-
 export const FWTheme: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      <TextGrid />
+      {Object.entries(fwThemeDoNotUseOutsideStorybook.fontSizes)
+        .slice()
+        .reverse()
+        .map(([size, px]: any) => {
+          return (
+            <Text key={size} size={size}>
+              Text size {size} {px}
+            </Text>
+          )
+        })}
     </FWThemeProvider>
   )
 }

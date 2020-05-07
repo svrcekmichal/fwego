@@ -118,4 +118,4 @@ export const Box: React.FC<BoxProps> = forwardRef(
   }
 )
 
-Box.displayName = 'FWBox'
+Box.displayName = 'Box'

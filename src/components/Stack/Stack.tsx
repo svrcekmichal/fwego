@@ -30,4 +30,4 @@ export const Stack: React.FC<StackProps> = forwardRef(
   }
 )
 
-Stack.displayName = 'FWStack'
+Stack.displayName = 'Stack'

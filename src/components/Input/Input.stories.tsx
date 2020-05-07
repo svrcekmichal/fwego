@@ -1,10 +1,14 @@
 import React from 'react'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Input, Stack } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Input,
-  title: 'Input'
+  title: 'Input',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
 export const Default: React.FC<{}> = () => {

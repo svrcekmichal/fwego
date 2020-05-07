@@ -40,4 +40,4 @@ export const Text: React.FC<TextProps> = forwardRef(
   }
 )
 
-Text.displayName = 'FWText'
+Text.displayName = 'Text'

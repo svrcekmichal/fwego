@@ -2,14 +2,19 @@ import React from 'react'
 import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Box, Inline, Flex, Text } from '../'
+import type { BoxProps } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Box,
-  title: 'Box'
+  title: 'Box',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
-export const Default: React.FC<{}> = () => {
-  return <Box>An Empty Box</Box>
+export const Default: React.FC<BoxProps> = () => {
+  return <Box p="medium">An Empty Box</Box>
 }
 
 const ColorBox: React.FC<any> = ({ bg, children }: any) => {
@@ -55,47 +60,54 @@ export const FWColors: React.FC<{}> = () => {
   )
 }
 
-const GridColumn: React.FC<any> = ({ width, children }: any) => {
-  return (
-    <Box
-      bg="primary"
-      color="white"
-      height="100"
-      width={width}
-      border="2px solid white"
-    >
-      {children}
-    </Box>
-  )
-}
-
 export const ResponsiveGrid: React.FC<{}> = () => {
   return (
     <>
-      <Flex flexWrap="wrap" mb="medium">
-        <GridColumn width={[1, 1 / 2, 1 / 3, 1 / 4]}>
-          width=&#123;{'[1, 1/2, 1/3, 1/4]'}&#125;
-        </GridColumn>
-        <GridColumn width={[1, 1 / 2, 1 / 3, 1 / 4]}>
-          width=&#123;{'[1, 1/2, 1/3, 1/4]'}&#125;
-        </GridColumn>
-        <GridColumn width={[1, 1 / 2, 1 / 3, 1 / 4]}>
-          width=&#123;{'[1, 1/2, 1/3, 1/4]'}&#125;
-        </GridColumn>
-        <GridColumn width={[1, 1 / 2, 1 / 3, 1 / 4]}>
-          width=&#123;{'[1, 1/2, 1/3, 1/4]'}&#125;
-        </GridColumn>
+      <Flex flexWrap="wrap" mb="medium" color="white">
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1 / 2, 1 / 3, 1 / 4]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1 / 2, 1 / 3, 1 / 4]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1 / 2, 1 / 3, 1 / 4]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1 / 2, 1 / 3, 1 / 4]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
       </Flex>
-      <Flex flexWrap="wrap">
-        <GridColumn width={[1, 1, 1 / 3]}>
-          width=&#123;{'[1, 1, 1/3]'}&#125;
-        </GridColumn>
-        <GridColumn width={[1, 1, 1 / 3]}>
-          width=&#123;{'[1, 1, 1/3]'}&#125;
-        </GridColumn>
-        <GridColumn width={[1, 1, 1 / 3]}>
-          width=&#123;{'[1, 1, 1/3]'}&#125;
-        </GridColumn>
+      <Flex flexWrap="wrap" color="white">
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1, 1 / 3]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1, 1 / 3]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
+        <Box
+          bg="primary"
+          height="100"
+          width={[1, 1, 1 / 3]}
+          boxShadow="inset 0px 0px 0px 1px white"
+        />
       </Flex>
     </>
   )

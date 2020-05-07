@@ -97,6 +97,23 @@ const styleConfig: StyleConfig = {
     name: 'min-width',
     transformer: sizeTransformer
   },
+  maxHeight: {
+    name: 'max-height',
+    transformer: sizeTransformer
+  },
+  maxWidth: {
+    name: 'max-width',
+    transformer: sizeTransformer
+  },
+  overflow: {
+    name: 'overflow'
+  },
+  overflowX: {
+    name: 'overflow-x'
+  },
+  overflowY: {
+    name: 'overflow-y'
+  },
   p: {
     name: 'padding',
     transformer: spaceTransformer

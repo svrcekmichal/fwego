@@ -1,10 +1,14 @@
 import React from 'react'
 import { useTheme } from '../../hooks'
 import { Stack, Flex, Text } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Stack,
-  title: 'Stack'
+  title: 'Stack',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
 const StackedBox: React.FC<any> = ({ space, px }: any) => {

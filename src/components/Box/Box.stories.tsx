@@ -2,14 +2,19 @@ import React from 'react'
 import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Box, Inline, Flex, Text } from '../'
+import type { BoxProps } from '../'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Box,
-  title: 'Box'
+  title: 'Box',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
-export const Default: React.FC<{}> = () => {
-  return <Box>An Empty Box</Box>
+export const Default: React.FC<BoxProps> = () => {
+  return <Box p="medium">An Empty Box</Box>
 }
 
 const ColorBox: React.FC<any> = ({ bg, children }: any) => {

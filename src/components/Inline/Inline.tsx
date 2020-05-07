@@ -59,4 +59,4 @@ export const Inline: React.FC<InlineProps> = forwardRef(
   }
 )
 
-Inline.displayName = 'FWInline'
+Inline.displayName = 'Inline'

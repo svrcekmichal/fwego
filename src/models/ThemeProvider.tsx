@@ -27,4 +27,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   )
 }
 
-ThemeProvider.displayName = 'FWThemeProvider'
+ThemeProvider.displayName = 'ThemeProvider'

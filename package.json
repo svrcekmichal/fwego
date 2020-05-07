@@ -51,6 +51,7 @@
     "lodash": "^4.17.15",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "rollup": "^2.7.6",
     "rollup-plugin-peer-deps-external": "^2.2.2",

@@ -24,4 +24,4 @@ export const Input: React.FC<InputProps> = forwardRef(
   }
 )
 
-Input.displayName = 'FWInput'
+Input.displayName = 'Input'

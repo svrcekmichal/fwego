@@ -67,4 +67,4 @@ export const Flex: React.FC<FlexProps> = forwardRef(
   }
 )
 
-Flex.displayName = 'FWBox'
+Flex.displayName = 'Flex'

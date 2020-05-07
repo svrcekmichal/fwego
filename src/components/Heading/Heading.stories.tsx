@@ -2,10 +2,14 @@ import React from 'react'
 import { FWThemeProvider } from '../../models'
 import { Box, Heading, Inline } from '../'
 import { headingConfig } from './Heading'
+import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
   component: Heading,
-  title: 'Heading'
+  title: 'Heading',
+  parameters: {
+    info: infoAddOn
+  }
 }
 
 const HeadingGrid: React.FC<{}> = () => {

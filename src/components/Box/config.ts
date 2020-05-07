@@ -29,9 +29,6 @@ const styleConfig: StyleConfig = {
   boxShadow: {
     name: 'box-shadow'
   },
-  boxSizing: {
-    name: 'box-sizing'
-  },
   color: {
     name: 'color',
     transformer: colorTransformer

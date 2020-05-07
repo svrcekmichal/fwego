@@ -9,3 +9,5 @@ type Props = {
 export const FWThemeProvider: React.FC<Props> = ({ children }: Props) => {
   return <ThemeProvider theme={fwTheme}>{children}</ThemeProvider>
 }
+
+FWThemeProvider.displayName = 'FWThemeProvider'

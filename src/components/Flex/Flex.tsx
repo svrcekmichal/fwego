@@ -7,7 +7,6 @@ import { partitionStyleProps, combineCssProperties } from '../../utils'
 export interface FlexProps extends BoxProps {
   alignItems?: string
   alignContent?: string
-  alignSelf?: string
   flex?: number | string
   flexDirection?: string
   flexWrap?: string
@@ -22,9 +21,6 @@ const styleConfig = {
   },
   alignContent: {
     name: 'align-content'
-  },
-  alignSelf: {
-    name: 'align-self'
   },
   flex: {
     name: 'flex'
@@ -46,7 +42,7 @@ const styleConfig = {
   }
 }
 
-export const Flex: React.FC<FlexProps> = forwardRef(
+export const Flex = forwardRef(
   (
     { children, className, ...props }: FlexProps,
     ref: React.Ref<HTMLDivElement>

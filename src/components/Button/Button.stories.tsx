@@ -18,9 +18,21 @@ export const Default: React.FC<{}> = () => {
 export const FWTheme: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      <Inline space="small">
+      <Inline space="small" mb="small">
         <Button variant="primary">Primary</Button>
         <Button variant="outline">Outline</Button>
+        <Button variant="text">Text Button</Button>
+      </Inline>
+      <Inline space="small">
+        <Button disabled variant="primary">
+          Disabled
+        </Button>
+        <Button disabled variant="outline">
+          Disabled
+        </Button>
+        <Button disabled variant="text">
+          Disabled
+        </Button>
       </Inline>
     </FWThemeProvider>
   )

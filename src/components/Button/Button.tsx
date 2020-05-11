@@ -2,10 +2,8 @@ import React, { forwardRef } from 'react'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
 
-export interface ButtonProps extends BoxProps {
-  ref?: React.Ref<HTMLButtonElement>
-  type?: 'submit' | 'button' | 'reset'
-}
+export type ButtonProps = BoxProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const fwcss = {
   border: '0',
@@ -21,16 +19,16 @@ const fwcss = {
   textDecoration: 'none'
 }
 
-export const Button: React.FC<ButtonProps> = forwardRef(
+export const Button = forwardRef(
   (
     { as = 'button', children, type = 'button', ...props }: ButtonProps,
-    ref: React.Ref<HTMLButtonElement>
+    ref: React.Ref<HTMLElement>
   ) => {
     return (
       <Box
         as={as}
         ref={ref}
-        // @ts-ignore TODO @ben fix
+        // @ts-ignore FIXME
         type={as === 'button' ? type : undefined}
         fwcss={fwcss}
         fwelement="button"

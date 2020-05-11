@@ -17,10 +17,10 @@ const fwcss = {
   weight: 'normal'
 }
 
-export const Text: React.FC<TextProps> = forwardRef(
+export const Text = forwardRef(
   (
     { baseline = false, children, className, size, ...props }: TextProps,
-    ref: React.Ref<any>
+    ref: React.Ref<HTMLElement>
   ) => {
     const baselineCls = useBaselineStyles(baseline, size)
 

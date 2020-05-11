@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Box, Inline, Flex, Text } from '../'
-import type { BoxProps } from '../'
 import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
@@ -13,7 +12,7 @@ export default {
   }
 }
 
-export const Default: React.FC<BoxProps> = () => {
+export const Default: React.FC<{}> = () => {
   return <Box p="medium">An Empty Box</Box>
 }
 
@@ -131,7 +130,7 @@ const SpacingBox: React.FC<any> = ({ space, px }: any) => {
   )
 }
 
-export const Spacing: React.FC<any> = () => {
+export const Spacing: React.FC<{}> = () => {
   const theme = useTheme()
   return (
     <Flex flexWrap="wrap">
@@ -150,7 +149,7 @@ const ResponsiveSpacingBox: React.FC<any> = ({ children, ...props }: any) => {
   )
 }
 
-export const ResponsiveSpacing: React.FC<any> = () => {
+export const ResponsiveSpacing: React.FC<{}> = () => {
   return (
     <Flex>
       <ResponsiveSpacingBox p={['none', 'small', 'medium', 'large']}>
@@ -160,5 +159,18 @@ export const ResponsiveSpacing: React.FC<any> = () => {
         <Text>m=&#123;{"['xsmall', 'medium', 'xlarge']"}&#125;</Text>
       </ResponsiveSpacingBox>
     </Flex>
+  )
+}
+
+export const Container: React.FC<{}> = () => {
+  return (
+    <Box
+      mx="auto"
+      px="medium"
+      width="100%"
+      maxWidth={['100%', '100%', '720px', '960px', '1140px']}
+    >
+      <Text>Container</Text>
+    </Box>
   )
 }

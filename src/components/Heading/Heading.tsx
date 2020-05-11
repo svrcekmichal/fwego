@@ -47,8 +47,11 @@ const fwcss = {
   weight: 'bold'
 }
 
-export const Heading: React.FC<HeadingProps> = forwardRef(
-  ({ children, level = '1', ...props }: HeadingProps, ref: React.Ref<any>) => {
+export const Heading = forwardRef(
+  (
+    { children, level = '1', ...props }: HeadingProps,
+    ref: React.Ref<HTMLHeadingElement>
+  ) => {
     const { as, size } = headingConfig[level]
 
     return (

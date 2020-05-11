@@ -2,9 +2,7 @@ import React, { forwardRef } from 'react'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
 
-export interface InputProps extends BoxProps {
-  ref?: React.Ref<HTMLInputElement>
-}
+export type InputProps = BoxProps & React.InputHTMLAttributes<HTMLInputElement>
 
 const fwcss = {
   border: '0',
@@ -16,7 +14,7 @@ const fwcss = {
   width: '100%'
 }
 
-export const Input: React.FC<InputProps> = forwardRef(
+export const Input = forwardRef(
   (props: InputProps, ref: React.Ref<HTMLInputElement>) => {
     return (
       <Box as="input" ref={ref} fwcss={fwcss} fwelement="input" {...props} />

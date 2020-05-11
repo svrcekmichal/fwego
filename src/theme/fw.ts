@@ -44,8 +44,15 @@ const fwTheme: Theme = {
   button: {
     bg: 'transparent',
     borderRadius: '18px',
+    color: 'white',
     fontFamily: fontFamily,
-    weight: 'semiBold'
+    weight: 'semiBold',
+    '&:hover': {
+      color: 'white'
+    },
+    '&:disabled': {
+      opacity: '0.3'
+    }
   },
   input: {
     bg: colors['blk1'],
@@ -71,13 +78,22 @@ const fwTheme: Theme = {
   },
   variants: {
     primary: {
-      backgroundImage: colors['primaryGradient']
+      backgroundImage: colors['primaryGradient'],
+      '&:hover': {
+        color: 'white'
+      }
     },
     outline: {
       boxShadow: `inset 0 0 0 1px #4b4b4b`,
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',
-        boxShadow: 'none'
+        boxShadow: 'none',
+        color: 'white'
+      }
+    },
+    text: {
+      '&:hover': {
+        color: 'white'
       }
     }
   }

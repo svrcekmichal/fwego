@@ -8,6 +8,9 @@ import {
 } from './transformers'
 
 const styleConfig: StyleConfig = {
+  alignSelf: {
+    name: 'align-self'
+  },
   backgroundImage: {
     name: 'background-image'
   },
@@ -18,8 +21,43 @@ const styleConfig: StyleConfig = {
   border: {
     name: 'border'
   },
+  borderCollapse: {
+    name: 'border-collapse'
+  },
+  borderColor: {
+    name: 'border-color',
+    transformer: colorTransformer
+  },
+  borderTop: {
+    name: 'border-top'
+  },
+  borderRight: {
+    name: 'border-right'
+  },
+  borderBottom: {
+    name: 'border-bottom'
+  },
+  borderLeft: {
+    name: 'border-left'
+  },
   borderRadius: {
     name: 'border-radius',
+    transformer: sizeTransformer
+  },
+  borderTopLeftRadius: {
+    name: 'border-top-left-radius',
+    transformer: sizeTransformer
+  },
+  borderTopRightRadius: {
+    name: 'border-top-right-radius',
+    transformer: sizeTransformer
+  },
+  borderBottomLeftRadius: {
+    name: 'border-bottom-left-radius',
+    transformer: sizeTransformer
+  },
+  borderBottomRightRadius: {
+    name: 'border-bottom-right-radius',
     transformer: sizeTransformer
   },
   bottom: {
@@ -104,6 +142,9 @@ const styleConfig: StyleConfig = {
   maxWidth: {
     name: 'max-width',
     transformer: sizeTransformer
+  },
+  opacity: {
+    name: 'opacity'
   },
   overflow: {
     name: 'overflow'

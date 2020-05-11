@@ -3,27 +3,38 @@ import { cx } from '../../emotion'
 import { useTheme } from '../../hooks'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
 import type { FontSize, FontWeight } from '../../theme/fonts'
-import type { Space, } from '../../theme/spaces'
-import type { Overflow } from '../../theme/overflows'
+import type { Space } from '../../theme/spaces'
 import styleConfig from './config'
 
 export type Size = string | number
 export type ResponsiveSize = Size | Array<Size>
-export type ResponsiveSpace = Space | Array<Space>
+export type ResponsiveSpace = Space | Array<Space> | ResponsiveSize
 export type ResponsiveFontSize = FontSize | Array<FontSize>
+export type ResponsiveString = string | Array<string>
+export type ResponsiveProp = string | number | Array<string> | Array<number>
+export type Overflow = 'visible' | 'hidden' | 'scroll' | 'auto'
+export type ResponsiveOverflow = Overflow | Array<Overflow>
+type FixMe = any
 
-export interface BoxProps extends React.HTMLAttributes<any> {
+export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
+  alignSelf?: string
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
-  bg?: string
-  backgroundImage?: string
-  border?: string
-  borderRadius?: string
+  bg?: ResponsiveString
+  backgroundImage?: ResponsiveString
+  border?: ResponsiveString
+  borderCollapse?: ResponsiveString
+  borderRadius?: ResponsiveString
+  borderTopLeftRadius?: ResponsiveSize
+  borderTopRightRadius?: ResponsiveSize
+  borderBottomLeftRadius?: ResponsiveSize
+  borderBottomRightRadius?: ResponsiveSize
   bottom?: ResponsiveSize
-  boxShadow?: string
-  boxSizing?: string
-  color?: string
-  cursor?: string
-  display?: string
+  boxShadow?: ResponsiveString
+  boxSizing?: ResponsiveString
+  // should be ResponsiveString but conflicts with HTMLAttributes
+  color?: FixMe
+  cursor?: ResponsiveString
+  display?: ResponsiveString
   fwcss?: { [key: string]: string }
   fwelement?: string
   fontSize?: ResponsiveFontSize
@@ -41,9 +52,9 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   minWidth?: ResponsiveSpace
   maxHeight?: ResponsiveSpace
   maxWidth?: ResponsiveSpace
-  overflow?: Overflow
-  overflowX?: Overflow
-  overflowY?: Overflow
+  overflow?: ResponsiveOverflow
+  overflowX?: ResponsiveOverflow
+  overflowY?: ResponsiveOverflow
   p?: ResponsiveSpace
   pt?: ResponsiveSpace
   pr?: ResponsiveSpace
@@ -51,18 +62,16 @@ export interface BoxProps extends React.HTMLAttributes<any> {
   pl?: ResponsiveSpace
   py?: ResponsiveSpace
   px?: ResponsiveSpace
-  position?: string
-  ref?: React.Ref<any>
+  position?: ResponsiveString
   right?: ResponsiveSize
   size?: ResponsiveFontSize
-  textAlign?: string
-  textDecoration?: string
-  to?: string
+  textAlign?: ResponsiveString
+  textDecoration?: ResponsiveString
   top?: ResponsiveSize
   width?: ResponsiveSize
   weight?: FontWeight
   variant?: string
-  zIndex?: string | number
+  zIndex?: ResponsiveProp
 }
 
 const fwBoxCss = {
@@ -71,7 +80,7 @@ const fwBoxCss = {
   minWidth: '0px'
 }
 
-export const Box: React.FC<BoxProps> = forwardRef(
+export const Box = forwardRef(
   (
     {
       as = 'div',
@@ -82,19 +91,19 @@ export const Box: React.FC<BoxProps> = forwardRef(
       variant,
       ...props
     }: BoxProps,
-    ref: React.Ref<HTMLDivElement>
+    ref: React.Ref<HTMLElement>
   ) => {
     const theme = useTheme()
     const Component = as
     const [forwardedProps, styleProps] = partitionStyleProps(props, styleConfig)
 
     let elementStyles = {}
-    if (fwelement && theme[fwelement]) {
+    if (fwelement && fwelement in theme) {
       elementStyles = theme[fwelement]
     }
 
     let variantStyles = {}
-    if (variant && theme.variants?.[variant]) {
+    if (variant && variant in theme.variants) {
       variantStyles = theme.variants[variant]
     }
 

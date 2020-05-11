@@ -10,7 +10,7 @@ export interface InlineProps extends FlexProps {
   space?: Space
 }
 
-export const Inline: React.FC<InlineProps> = forwardRef(
+export const Inline = forwardRef(
   (
     {
       align = 'left',

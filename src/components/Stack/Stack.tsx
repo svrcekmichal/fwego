@@ -9,7 +9,7 @@ export interface StackProps extends BoxProps {
   space?: Space
 }
 
-export const Stack: React.FC<StackProps> = forwardRef(
+export const Stack = forwardRef(
   (
     { children, className, space = 'medium', ...props }: StackProps,
     ref: React.Ref<HTMLDivElement>

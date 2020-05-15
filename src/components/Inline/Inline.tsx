@@ -3,9 +3,9 @@ import { css, cx } from '../../emotion'
 import useSpace from '../../hooks/useSpace'
 import type { Space } from '../../theme/spaces'
 import { Flex } from '../Flex/Flex'
-import type { FlexProps } from '../Flex/Flex'
+import type { BoxProps } from '../Box/Box'
 
-export interface InlineProps extends FlexProps {
+export interface InlineProps extends BoxProps {
   align?: 'left' | 'right'
   space?: Space
 }

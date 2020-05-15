@@ -39,9 +39,9 @@ export function toSpaceUnit(space: Space | Size, spaces: Spaces): string {
 
 export function spaceTransformer(
   propertyValue: Space | Size,
-  theme?: Theme
+  theme: Theme
 ): string {
-  return toSpaceUnit(propertyValue, theme?.spaces)
+  return toSpaceUnit(propertyValue, theme.spaces)
 }
 
 export function toFontSizeUnit(
@@ -53,9 +53,9 @@ export function toFontSizeUnit(
 
 export function fontSizeTransformer(
   propertyValue: FontSize,
-  theme?: Theme
+  theme: Theme
 ): string {
-  return toFontSizeUnit(propertyValue, theme?.fontSizes)
+  return toFontSizeUnit(propertyValue, theme.fontSizes)
 }
 
 export function toFontWeightUnit(
@@ -67,9 +67,9 @@ export function toFontWeightUnit(
 
 export function fontWeightTransformer(
   propertyValue: FontWeight,
-  theme?: Theme
+  theme: Theme
 ): string {
-  return toFontWeightUnit(propertyValue, theme?.fontWeights)
+  return toFontWeightUnit(propertyValue, theme.fontWeights)
 }
 
 export function isValidColor(color: string): boolean {
@@ -78,7 +78,7 @@ export function isValidColor(color: string): boolean {
   return s.color != ''
 }
 
-export function colorTransformer(propertyValue: string, theme?: Theme): string {
-  const themeColor = propertyValue && theme?.colors?.[propertyValue]
+export function colorTransformer(propertyValue: string, theme: Theme): string {
+  const themeColor = propertyValue && theme.colors?.[propertyValue]
   return themeColor || (isValidColor(propertyValue) ? propertyValue : undefined)
 }

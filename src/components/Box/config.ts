@@ -8,11 +8,23 @@ import {
 } from './transformers'
 
 const styleConfig: StyleConfig = {
+  alignContent: {
+    name: 'align-content'
+  },
+  alignItems: {
+    name: 'align-items'
+  },
   alignSelf: {
     name: 'align-self'
   },
   backgroundImage: {
     name: 'background-image'
+  },
+  backgroundPosition: {
+    name: 'background-position'
+  },
+  backgroundSize: {
+    name: 'background-size'
   },
   bg: {
     name: 'background',
@@ -80,6 +92,21 @@ const styleConfig: StyleConfig = {
   display: {
     name: 'display'
   },
+  flex: {
+    name: 'flex'
+  },
+  flexDirection: {
+    name: 'flex-direction'
+  },
+  flexFlow: {
+    name: 'flex-flow'
+  },
+  flexShrink: {
+    name: 'flex-shrink'
+  },
+  flexWrap: {
+    name: 'flex-wrap'
+  },
   fontFamily: {
     name: 'font-family'
   },
@@ -94,6 +121,9 @@ const styleConfig: StyleConfig = {
   height: {
     name: 'height',
     transformer: sizeTransformer
+  },
+  justifyContent: {
+    name: 'justify-content'
   },
   left: {
     name: 'left',
@@ -146,6 +176,9 @@ const styleConfig: StyleConfig = {
   opacity: {
     name: 'opacity'
   },
+  order: {
+    name: 'order'
+  },
   overflow: {
     name: 'overflow'
   },
@@ -183,6 +216,9 @@ const styleConfig: StyleConfig = {
     name: 'padding-left',
     transformer: spaceTransformer
   },
+  pointerEvents: {
+    name: 'pointer-events'
+  },
   position: {
     name: 'position'
   },
@@ -200,13 +236,25 @@ const styleConfig: StyleConfig = {
   textDecoration: {
     name: 'text-decoration'
   },
+  textOverflow: {
+    name: 'text-overflow'
+  },
+  textShadow: {
+    name: 'text-shadow'
+  },
   top: {
     name: 'top',
     transformer: sizeTransformer
   },
+  transition: {
+    name: 'transition'
+  },
   weight: {
     name: 'font-weight',
     transformer: fontWeightTransformer
+  },
+  whiteSpace: {
+    name: 'white-space'
   },
   width: {
     name: 'width',

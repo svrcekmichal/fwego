@@ -7,7 +7,7 @@ export type StyleConfig = {
   [key: string]: {
     name?: string
     names?: Array<string>
-    transformer?: (value: any, theme?: Theme) => string
+    transformer?: (value: any, theme: Theme) => string
   }
 }
 
@@ -30,12 +30,12 @@ export function partitionStyleProps(
 function toResponsiveStyles(
   cssName: string,
   cssValue: string | Array<string> | undefined,
-  theme?: Theme
+  theme: Theme
 ): string {
-  if (!cssValue) {
+  if (typeof cssValue === 'undefined') {
     return ''
   }
-  if (theme && Array.isArray(cssValue)) {
+  if (Array.isArray(cssValue)) {
     return cssValue
       .map((value, i) => {
         if (i === 0) {
@@ -54,7 +54,7 @@ function toCssProperty(
   propertyName: string,
   propertyValue: string | Array<string>,
   styleConfig: StyleConfig,
-  theme?: Theme
+  theme: Theme
 ): string {
   const config = styleConfig[propertyName]
   const cssName = config?.name || propertyName
@@ -78,7 +78,7 @@ function toCssProperty(
 export function combineCssProperties(
   styleProps: Props,
   styleConfig: StyleConfig,
-  theme?: Theme
+  theme: Theme
 ): string {
   const psuedo: Array<[string, Props]> = []
   const regular: Array<[string, string]> = []

@@ -48,7 +48,12 @@ const fwTheme: Theme = {
     fontFamily: fontFamily,
     weight: 'semiBold',
     '&:hover': {
-      color: 'white'
+      color: 'white',
+      textDecoration: 'none'
+    },
+    '&:focus': {
+      color: 'white',
+      textDecoration: 'none'
     },
     '&:disabled': {
       opacity: '0.3'
@@ -78,22 +83,21 @@ const fwTheme: Theme = {
   },
   variants: {
     primary: {
-      backgroundImage: colors['primaryGradient'],
-      '&:hover': {
-        color: 'white'
-      }
+      backgroundImage: colors['primaryGradient']
     },
     outline: {
       boxShadow: `inset 0 0 0 1px #4b4b4b`,
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none',
-        color: 'white'
+        color: 'white',
+        textDecoration: 'none'
       }
     },
     text: {
       '&:hover': {
-        color: 'white'
+        color: 'white',
+        textDecoration: 'underline'
       }
     }
   }

@@ -1,14 +1,11 @@
 import React, { forwardRef } from 'react'
 import { cx } from '../../emotion'
-import type { FontSize, FontWeight } from '../../theme/fonts'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
 import useBaselineStyles from './useBaselineStyles'
 
 export interface TextProps extends BoxProps {
   baseline?: boolean
-  size?: FontSize
-  weight?: FontWeight
 }
 
 const fwcss = {

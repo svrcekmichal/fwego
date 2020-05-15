@@ -17,10 +17,14 @@ export type ResponsiveOverflow = Overflow | Array<Overflow>
 type FixMe = any
 
 export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
-  alignSelf?: string
+  alignContent?: ResponsiveString
+  alignItems?: ResponsiveString
+  alignSelf?: ResponsiveString
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
   bg?: ResponsiveString
   backgroundImage?: ResponsiveString
+  backgroundPosition?: ResponsiveString
+  backgroundSize?: ResponsiveString
   border?: ResponsiveString
   borderCollapse?: ResponsiveString
   borderRadius?: ResponsiveString
@@ -35,11 +39,16 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   color?: FixMe
   cursor?: ResponsiveString
   display?: ResponsiveString
+  flex?: ResponsiveProp
+  flexDirection?: ResponsiveString
+  flexWrap?: ResponsiveString
+  flexFlow?: ResponsiveString
   fwcss?: { [key: string]: string }
   fwelement?: string
   fontSize?: ResponsiveFontSize
   fontWeight?: FontWeight
   height?: ResponsiveSize
+  justifyContent?: ResponsiveString
   left?: ResponsiveSize
   m?: ResponsiveSpace
   mt?: ResponsiveSpace
@@ -52,6 +61,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   minWidth?: ResponsiveSpace
   maxHeight?: ResponsiveSpace
   maxWidth?: ResponsiveSpace
+  order?: ResponsiveProp
   overflow?: ResponsiveOverflow
   overflowX?: ResponsiveOverflow
   overflowY?: ResponsiveOverflow
@@ -62,12 +72,17 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   pl?: ResponsiveSpace
   py?: ResponsiveSpace
   px?: ResponsiveSpace
+  pointerEvents?: ResponsiveString
   position?: ResponsiveString
   right?: ResponsiveSize
   size?: ResponsiveFontSize
   textAlign?: ResponsiveString
   textDecoration?: ResponsiveString
+  textOverflow?: ResponsiveString
+  textShadow?: ResponsiveString
   top?: ResponsiveSize
+  transition?: ResponsiveString
+  whiteSpace?: ResponsiveString
   width?: ResponsiveSize
   weight?: FontWeight
   variant?: string

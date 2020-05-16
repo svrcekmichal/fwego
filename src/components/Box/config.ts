@@ -260,6 +260,12 @@ const styleConfig: StyleConfig = {
     name: 'width',
     transformer: sizeTransformer
   },
+  wordBreak: {
+    name: 'word-break'
+  },
+  wordWrap: {
+    name: 'word-wrap'
+  },
   zIndex: {
     name: 'z-index'
   }

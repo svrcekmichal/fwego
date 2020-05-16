@@ -84,7 +84,9 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   transition?: ResponsiveString
   whiteSpace?: ResponsiveString
   width?: ResponsiveSize
-  weight?: FontWeight
+  weight?: FontWeight | Array<FontWeight>
+  wordBreak?: ResponsiveString
+  wordWrap?: ResponsiveString
   variant?: string
   zIndex?: ResponsiveProp
 }

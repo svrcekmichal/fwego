@@ -51,6 +51,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   height?: ResponsiveSize
   justifyContent?: ResponsiveString
   left?: ResponsiveSize
+  lineHeight?: ResponsiveProp
   m?: ResponsiveSpace
   mt?: ResponsiveSpace
   mr?: ResponsiveSpace

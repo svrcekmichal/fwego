@@ -122,6 +122,9 @@ const styleConfig: StyleConfig = {
     name: 'height',
     transformer: sizeTransformer
   },
+  lineHeight: {
+    name: 'line-height'
+  },
   justifyContent: {
     name: 'justify-content'
   },

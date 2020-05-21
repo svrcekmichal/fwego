@@ -47,6 +47,7 @@ const fwTheme: Theme = {
     color: 'white',
     fontFamily: fontFamily,
     weight: 'semiBold',
+    lineHeight: 1.5,
     '&:hover': {
       color: 'white',
       textDecoration: 'none'
@@ -56,7 +57,7 @@ const fwTheme: Theme = {
       textDecoration: 'none'
     },
     '&:disabled': {
-      opacity: '0.3'
+      opacity: 0.3
     }
   },
   input: {
@@ -86,7 +87,7 @@ const fwTheme: Theme = {
       backgroundImage: colors['primaryGradient']
     },
     outline: {
-      boxShadow: `inset 0 0 0 1px #4b4b4b`,
+      boxShadow: 'inset 0 0 0 1px #4b4b4b',
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none',
@@ -95,11 +96,15 @@ const fwTheme: Theme = {
       }
     },
     icon: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexShrink: 0,
       borderRadius: '50%',
-      height: 35,
-      width: 35,
+      height: 37,
+      width: 37,
       p: 'none',
-      boxShadow: `inset 0 0 0 1px #4b4b4b`,
+      boxShadow: 'inset 0 0 0 1px #4b4b4b',
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none',

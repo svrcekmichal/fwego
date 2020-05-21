@@ -43,7 +43,7 @@ const fwTheme: Theme = {
   fontOffsets: fontOffsets,
   button: {
     bg: 'transparent',
-    borderRadius: '20%/50%',
+    borderRadius: '500px',
     color: 'white',
     fontFamily: fontFamily,
     weight: 'semiBold',
@@ -86,6 +86,19 @@ const fwTheme: Theme = {
       backgroundImage: colors['primaryGradient']
     },
     outline: {
+      boxShadow: `inset 0 0 0 1px #4b4b4b`,
+      '&:hover': {
+        bg: 'rgba(255, 255, 255, 0.2)',
+        boxShadow: 'none',
+        color: 'white',
+        textDecoration: 'none'
+      }
+    },
+    icon: {
+      borderRadius: '50%',
+      height: 35,
+      width: 35,
+      p: 'none',
       boxShadow: `inset 0 0 0 1px #4b4b4b`,
       '&:hover': {
         bg: 'rgba(255, 255, 255, 0.2)',

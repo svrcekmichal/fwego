@@ -43,7 +43,7 @@ const fwTheme: Theme = {
   fontOffsets: fontOffsets,
   button: {
     bg: 'transparent',
-    borderRadius: '18px',
+    borderRadius: '20%/50%',
     color: 'white',
     fontFamily: fontFamily,
     weight: 'semiBold',

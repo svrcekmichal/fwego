@@ -45,6 +45,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   flexFlow?: ResponsiveString
   fwcss?: { [key: string]: string }
   fwelement?: string
+  fontFamily?: ResponsiveString
   fontSize?: ResponsiveFontSize
   fontWeight?: FontWeight
   height?: ResponsiveSize

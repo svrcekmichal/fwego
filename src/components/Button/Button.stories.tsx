@@ -23,7 +23,7 @@ export const FWTheme: React.FC<{}> = () => {
         <Button variant="outline">Outline</Button>
         <Button variant="text">Text Button</Button>
       </Inline>
-      <Inline space="small">
+      <Inline space="small" mb="small">
         <Button disabled variant="primary">
           Disabled
         </Button>
@@ -32,6 +32,11 @@ export const FWTheme: React.FC<{}> = () => {
         </Button>
         <Button disabled variant="text">
           Disabled
+        </Button>
+      </Inline>
+      <Inline space="small">
+        <Button variant="primary" px="xxxlarge" py="small" size="large">
+          Large
         </Button>
       </Inline>
     </FWThemeProvider>

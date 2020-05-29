@@ -1,27 +1,18 @@
 import type { Theme } from './theme'
-import { colors, fontSizes, fontOffsets, fontFamily } from './fwShared'
+import { colors, fontSizes, fontOffsets, fontFamily, button } from './fwShared'
 
 const fwTheme: Theme = {
   colors: colors,
   fontSizes: fontSizes,
   fontOffsets: fontOffsets,
   button: {
-    bg: 'transparent',
-    borderRadius: '500px',
+    ...button,
     color: 'white',
-    fontFamily: fontFamily,
-    weight: 'semiBold',
-    lineHeight: 1.5,
     '&:hover': {
-      color: 'white',
-      textDecoration: 'none'
+      color: 'white'
     },
     '&:focus': {
-      color: 'white',
-      textDecoration: 'none'
-    },
-    '&:disabled': {
-      opacity: 0.3
+      color: 'white'
     }
   },
   input: {

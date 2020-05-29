@@ -34,3 +34,20 @@ export const fontOffsets = {
   xxlarge: ['5px', '7px'],
   xxxlarge: ['6px', '8px']
 }
+
+export const button = {
+  bg: 'transparent',
+  borderRadius: '500px',
+  fontFamily: fontFamily,
+  weight: 'semiBold',
+  lineHeight: 1.5,
+  '&:hover': {
+    textDecoration: 'none'
+  },
+  '&:focus': {
+    textDecoration: 'none'
+  },
+  '&:disabled': {
+    opacity: 0.3
+  }
+}

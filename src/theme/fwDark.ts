@@ -1,5 +1,12 @@
 import type { Theme } from './theme'
-import { colors, fontSizes, fontOffsets, fontFamily, button } from './fwShared'
+import {
+  colors,
+  fontSizes,
+  fontOffsets,
+  fontFamily,
+  button,
+  input
+} from './fwShared'
 
 const fwTheme: Theme = {
   colors: colors,
@@ -16,18 +23,9 @@ const fwTheme: Theme = {
     }
   },
   input: {
+    ...input,
     bg: colors['blk1'],
-    borderRadius: '12px',
-    boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
-    color: 'white',
-    fontFamily: fontFamily,
-    '::placeholder': {
-      color: colors['gray5']
-    },
-    '&:focus': {
-      outline: 'none',
-      boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
-    }
+    color: 'white'
   },
   text: {
     fontFamily: fontFamily,

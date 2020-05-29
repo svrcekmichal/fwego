@@ -1,5 +1,12 @@
 import type { Theme } from './theme'
-import { colors, fontSizes, fontOffsets, fontFamily, button } from './fwShared'
+import {
+  colors,
+  fontSizes,
+  fontOffsets,
+  fontFamily,
+  button,
+  input
+} from './fwShared'
 
 // TODO: @deric finish changing values for light theme
 const fwTheme: Theme = {
@@ -8,27 +15,18 @@ const fwTheme: Theme = {
   fontOffsets: fontOffsets,
   button: {
     ...button,
-    color: colors.blk1,
+    color: colors['blk1'],
     '&:hover': {
-      color: colors.blk1
+      color: colors['blk1']
     },
     '&:focus': {
-      color: colors.blk1
+      color: colors['blk1']
     }
   },
   input: {
-    bg: colors['blk1'],
-    borderRadius: '12px',
-    boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
-    color: 'white',
-    fontFamily: fontFamily,
-    '::placeholder': {
-      color: colors['gray5']
-    },
-    '&:focus': {
-      outline: 'none',
-      boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
-    }
+    ...input,
+    bg: colors['white'],
+    color: colors['blk1']
   },
   text: {
     fontFamily: fontFamily,

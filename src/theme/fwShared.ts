@@ -51,3 +51,16 @@ export const button = {
     opacity: 0.3
   }
 }
+
+export const input = {
+  borderRadius: '12px',
+  boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
+  fontFamily: fontFamily,
+  '&:focus': {
+    outline: 'none',
+    boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
+  },
+  '::placeholder': {
+    color: colors['gray5']
+  }
+}

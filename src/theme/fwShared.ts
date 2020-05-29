@@ -10,7 +10,7 @@ export const colors = {
   white: '#ffffff'
 }
 
-export const fontFamily =
+const fontFamily =
   'Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif'
 
 export const fontSizes = {
@@ -63,4 +63,14 @@ export const input = {
   '::placeholder': {
     color: colors['gray5']
   }
+}
+
+export const text = {
+  fontFamily: fontFamily,
+  weight: 'medium'
+}
+
+export const heading = {
+  fontFamily: fontFamily,
+  weight: 'bold'
 }

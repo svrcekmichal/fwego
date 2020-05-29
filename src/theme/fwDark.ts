@@ -3,9 +3,10 @@ import {
   colors,
   fontSizes,
   fontOffsets,
-  fontFamily,
   button,
-  input
+  input,
+  text,
+  heading
 } from './fwShared'
 
 const fwTheme: Theme = {
@@ -28,12 +29,10 @@ const fwTheme: Theme = {
     color: 'white'
   },
   text: {
-    fontFamily: fontFamily,
-    weight: 'medium'
+    ...text
   },
   heading: {
-    fontFamily: fontFamily,
-    weight: 'bold'
+    ...heading
   },
   variants: {
     primary: {

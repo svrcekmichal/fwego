@@ -3,9 +3,10 @@ import {
   colors,
   fontSizes,
   fontOffsets,
-  fontFamily,
   button,
-  input
+  input,
+  text,
+  heading
 } from './fwShared'
 
 // TODO: @deric finish changing values for light theme
@@ -29,12 +30,10 @@ const fwTheme: Theme = {
     color: colors['blk1']
   },
   text: {
-    fontFamily: fontFamily,
-    weight: 'medium'
+    ...text
   },
   heading: {
-    fontFamily: fontFamily,
-    weight: 'bold'
+    ...heading
   },
   variants: {
     primary: {

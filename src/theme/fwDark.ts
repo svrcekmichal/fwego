@@ -6,7 +6,9 @@ import {
   button,
   input,
   text,
-  heading
+  heading,
+  variantPrimary,
+  variantOutline
 } from './fwShared'
 
 const fwTheme: Theme = {
@@ -36,15 +38,12 @@ const fwTheme: Theme = {
   },
   variants: {
     primary: {
-      backgroundImage: colors['primaryGradient']
+      ...variantPrimary
     },
     outline: {
-      boxShadow: 'inset 0 0 0 1px #4b4b4b',
+      ...variantOutline,
       '&:hover': {
-        bg: 'rgba(255, 255, 255, 0.2)',
-        boxShadow: 'none',
-        color: 'white',
-        textDecoration: 'none'
+        color: colors['white']
       }
     },
     icon: {

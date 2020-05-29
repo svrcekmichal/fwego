@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from './ThemeProvider'
-import fwThemeDark from '../theme/fw'
+import fwThemeDark from '../theme/fwDark'
 import fwThemeLight from '../theme/fwLight'
 import type { Theme } from '../theme/theme'
 

@@ -87,3 +87,26 @@ export const variantOutline = {
     textDecoration: 'none'
   }
 }
+
+export const variantIcon = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexShrink: 0,
+  borderRadius: '50%',
+  height: 37,
+  width: 37,
+  p: 'none',
+  boxShadow: 'inset 0 0 0 1px #4b4b4b',
+  '&:hover': {
+    bg: 'rgba(255, 255, 255, 0.2)',
+    boxShadow: 'none',
+    textDecoration: 'none'
+  }
+}
+
+export const variantText = {
+  '&:hover': {
+    textDecoration: 'underline'
+  }
+}

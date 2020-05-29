@@ -8,7 +8,9 @@ import {
   text,
   heading,
   variantPrimary,
-  variantOutline
+  variantOutline,
+  variantIcon,
+  variantText
 } from './fwShared'
 
 const fwTheme: Theme = {
@@ -17,18 +19,18 @@ const fwTheme: Theme = {
   fontOffsets: fontOffsets,
   button: {
     ...button,
-    color: 'white',
+    color: colors['white'],
     '&:hover': {
-      color: 'white'
+      color: colors['white']
     },
     '&:focus': {
-      color: 'white'
+      color: colors['white']
     }
   },
   input: {
     ...input,
     bg: colors['blk1'],
-    color: 'white'
+    color: colors['white']
   },
   text: {
     ...text
@@ -47,26 +49,15 @@ const fwTheme: Theme = {
       }
     },
     icon: {
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexShrink: 0,
-      borderRadius: '50%',
-      height: 37,
-      width: 37,
-      p: 'none',
-      boxShadow: 'inset 0 0 0 1px #4b4b4b',
+      ...variantIcon,
       '&:hover': {
-        bg: 'rgba(255, 255, 255, 0.2)',
-        boxShadow: 'none',
-        color: 'white',
-        textDecoration: 'none'
+        color: colors['white']
       }
     },
     text: {
+      ...variantText,
       '&:hover': {
-        color: 'white',
-        textDecoration: 'underline'
+        color: colors['white']
       }
     }
   }

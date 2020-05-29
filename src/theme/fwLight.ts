@@ -1,6 +1,7 @@
 import type { Theme } from './theme'
 import { colors, fontSizes, fontOffsets, fontFamily } from './fwShared'
 
+// TODO: @deric finish changing values for light theme
 const fwTheme: Theme = {
   colors: colors,
   fontSizes: fontSizes,

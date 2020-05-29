@@ -82,7 +82,6 @@ export const variantPrimary = {
 export const variantOutline = {
   boxShadow: 'inset 0 0 0 1px #4b4b4b',
   '&:hover': {
-    bg: 'rgba(255, 255, 255, 0.2)',
     boxShadow: 'none',
     textDecoration: 'none'
   }
@@ -99,7 +98,6 @@ export const variantIcon = {
   p: 'none',
   boxShadow: 'inset 0 0 0 1px #4b4b4b',
   '&:hover': {
-    bg: 'rgba(255, 255, 255, 0.2)',
     boxShadow: 'none',
     textDecoration: 'none'
   }

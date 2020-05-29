@@ -44,18 +44,23 @@ const fwTheme: Theme = {
     },
     outline: {
       ...variantOutline,
+      color: colors['blk1'],
       '&:hover': {
-        color: colors['blk1']
+        color: colors['blk1'],
+        bg: 'rgba(0, 0, 0, 0.2)'
       }
     },
     icon: {
       ...variantIcon,
+      color: colors['blk1'],
       '&:hover': {
-        color: colors['blk1']
+        color: colors['blk1'],
+        bg: 'rgba(0, 0, 0, 0.2)'
       }
     },
     text: {
       ...variantText,
+      color: colors['blk1'],
       '&:hover': {
         color: colors['blk1']
       }

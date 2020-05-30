@@ -1,6 +1,6 @@
 import React from 'react'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
-import { Button, Inline, Stack } from '../'
+import { Button, Inline, Stack } from '..'
 import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
@@ -11,13 +11,9 @@ export default {
   }
 }
 
-export const Default: React.FC<{}> = () => {
-  return <Button>Button</Button>
-}
-
-export const FWTheme: React.FC<{}> = () => {
+export const FWThemeDark: React.FC<{}> = () => {
   return (
-    <FWThemeProvider>
+    <FWThemeProvider theme="dark">
       <Stack>
         <Inline>
           <Button variant="primary">Primary</Button>

@@ -3,7 +3,7 @@ import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models'
 import { Text } from '../'
 import infoAddOn from '../../../.storybook/infoAddOn'
-import fwThemeDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDoNotUseOutsideStorybook'
+import fwThemeDarkDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDarkDoNotUseOutsideStorybook'
 
 export default {
   component: Text,
@@ -34,7 +34,7 @@ export const Default: React.FC<{}> = () => {
 export const FWTheme: React.FC<{}> = () => {
   return (
     <FWThemeProvider>
-      {Object.entries(fwThemeDoNotUseOutsideStorybook.fontSizes)
+      {Object.entries(fwThemeDarkDoNotUseOutsideStorybook.fontSizes)
         .slice()
         .reverse()
         .map(([size, px]: any) => {

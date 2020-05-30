@@ -14,7 +14,7 @@ export default {
 export const FWThemeLight: React.FC<{}> = () => {
   return (
     <FWThemeProvider theme="light">
-      <Stack>
+      <Stack bg="white">
         <Input placeholder="An input placeholder" />
         <Input as="textarea" placeholder="A textarea placeholder" />
       </Stack>

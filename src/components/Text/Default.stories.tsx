@@ -1,9 +1,7 @@
 import React from 'react'
 import { useTheme } from '../../hooks'
-import { FWThemeProvider } from '../../models'
-import { Text } from '../'
+import { Text } from '..'
 import infoAddOn from '../../../.storybook/infoAddOn'
-import fwThemeDarkDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDarkDoNotUseOutsideStorybook'
 
 export default {
   component: Text,
@@ -28,22 +26,5 @@ export const Default: React.FC<{}> = () => {
           )
         })}
     </>
-  )
-}
-
-export const FWTheme: React.FC<{}> = () => {
-  return (
-    <FWThemeProvider>
-      {Object.entries(fwThemeDarkDoNotUseOutsideStorybook.fontSizes)
-        .slice()
-        .reverse()
-        .map(([size, px]: any) => {
-          return (
-            <Text key={size} size={size}>
-              Text size {size} {px}
-            </Text>
-          )
-        })}
-    </FWThemeProvider>
   )
 }

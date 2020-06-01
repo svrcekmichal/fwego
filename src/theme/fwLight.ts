@@ -1,71 +1,47 @@
+import merge from 'lodash/merge'
+import cloneDeep from 'lodash/cloneDeep'
 import type { Theme } from './theme'
-import {
-  colors,
-  fontSizes,
-  fontOffsets,
-  button,
-  input,
-  text,
-  heading,
-  variantPrimary,
-  variantOutline,
-  variantIcon,
-  variantText
-} from './fwShared'
+import fwTheme, { colors } from './fw'
 
-const fwTheme: Theme = {
-  colors: colors,
-  fontSizes: fontSizes,
-  fontOffsets: fontOffsets,
-  button: {
-    ...button,
-    color: colors['blk1'],
-    '&:hover': {
-      color: colors['blk1']
-    },
-    '&:focus': {
-      color: colors['blk1']
-    }
-  },
-  input: {
-    ...input,
-    bg: colors['white'],
-    color: colors['blk1']
-  },
+const lightOverrides = {
   text: {
-    ...text
+    color: 'black'
   },
   heading: {
-    ...heading
+    color: 'black'
+  },
+  input: {
+    bg: 'white',
+    color: 'black',
+    boxShadow: `0px 0px 0px 1px ${colors['gray5']} inset`,
+    '::placeholder': {
+      color: 'black'
+    }
   },
   variants: {
-    primary: {
-      ...variantPrimary
-    },
     outline: {
-      ...variantOutline,
-      color: colors['blk1'],
+      color: 'black',
       '&:hover': {
-        color: colors['blk1'],
+        color: 'black',
         bg: 'rgba(0, 0, 0, 0.2)'
       }
     },
     icon: {
-      ...variantIcon,
-      color: colors['blk1'],
+      color: 'black',
       '&:hover': {
-        color: colors['blk1'],
+        color: 'black',
         bg: 'rgba(0, 0, 0, 0.2)'
       }
     },
     text: {
-      ...variantText,
-      color: colors['blk1'],
+      color: 'black',
       '&:hover': {
-        color: colors['blk1']
+        color: 'black'
       }
     }
   }
 }
 
-export default fwTheme
+const fwLightTheme: Theme = merge(cloneDeep(fwTheme), lightOverrides)
+
+export default fwLightTheme

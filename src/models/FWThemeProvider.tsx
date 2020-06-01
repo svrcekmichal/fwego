@@ -5,11 +5,11 @@ import fwThemeLight from '../theme/fwLight'
 import type { Theme } from '../theme/theme'
 
 type Props = {
-  theme?: string
+  theme?: 'light' | 'dark'
   children: React.ReactNode
 }
 
-const mapTheme = (theme): Theme => {
+const mapTheme = (theme?: 'light' | 'dark'): Theme => {
   switch (theme) {
     case 'light':
       return fwThemeLight

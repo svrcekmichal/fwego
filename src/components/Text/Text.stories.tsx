@@ -1,9 +1,9 @@
 import React from 'react'
-import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models'
-import { Text } from '../'
+import { useTheme } from '../../hooks'
 import infoAddOn from '../../../.storybook/infoAddOn'
-import fwThemeDoNotUseOutsideStorybook from '../../../.storybook/fwThemeDoNotUseOutsideStorybook'
+import fwTheme from '../../theme/fw'
+import { Text } from '..'
 
 export default {
   component: Text,
@@ -31,15 +31,32 @@ export const Default: React.FC<{}> = () => {
   )
 }
 
-export const FWTheme: React.FC<{}> = () => {
+export const FWThemeDark: React.FC<{}> = () => {
   return (
-    <FWThemeProvider>
-      {Object.entries(fwThemeDoNotUseOutsideStorybook.fontSizes)
+    <FWThemeProvider theme="dark">
+      {Object.entries(fwTheme.fontSizes)
         .slice()
         .reverse()
         .map(([size, px]: any) => {
           return (
             <Text key={size} size={size}>
+              Text size {size} {px}
+            </Text>
+          )
+        })}
+    </FWThemeProvider>
+  )
+}
+
+export const FWThemeLight: React.FC<{}> = () => {
+  return (
+    <FWThemeProvider theme="light">
+      {Object.entries(fwTheme.fontSizes)
+        .slice()
+        .reverse()
+        .map(([size, px]: any) => {
+          return (
+            <Text key={size} size={size} bg="white">
               Text size {size} {px}
             </Text>
           )

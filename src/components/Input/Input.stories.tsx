@@ -1,6 +1,6 @@
 import React from 'react'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
-import { Input, Stack } from '../'
+import { Input, Stack } from '..'
 import infoAddOn from '../../../.storybook/infoAddOn'
 
 export default {
@@ -20,10 +20,21 @@ export const Default: React.FC<{}> = () => {
   )
 }
 
-export const FWTheme: React.FC<{}> = () => {
+export const FWThemeDark: React.FC<{}> = () => {
   return (
-    <FWThemeProvider>
+    <FWThemeProvider theme="dark">
       <Stack>
+        <Input placeholder="An input placeholder" />
+        <Input as="textarea" placeholder="A textarea placeholder" />
+      </Stack>
+    </FWThemeProvider>
+  )
+}
+
+export const FWThemeLight: React.FC<{}> = () => {
+  return (
+    <FWThemeProvider theme="light">
+      <Stack bg="white">
         <Input placeholder="An input placeholder" />
         <Input as="textarea" placeholder="A textarea placeholder" />
       </Stack>

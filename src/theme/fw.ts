@@ -3,7 +3,7 @@ import type { Theme } from './theme'
 const fontFamily =
   'Avenir Next, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif'
 
-const colors = {
+export const colors = {
   primaryGradient: 'linear-gradient(254deg, #f78361, #f54b64)',
   primary: '#ff7061',
   blk1: '#121212',
@@ -11,8 +11,7 @@ const colors = {
   gray2: '#2b2b2b',
   gray3: '#404040',
   gray4: '#9b9b9b',
-  gray5: '#bdbdbd',
-  white: '#ffffff'
+  gray5: '#bdbdbd'
 }
 
 const fontSizes = {
@@ -61,14 +60,8 @@ const fwTheme: Theme = {
     }
   },
   input: {
-    bg: colors['blk1'],
     borderRadius: '12px',
-    boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
-    color: 'white',
     fontFamily: fontFamily,
-    '::placeholder': {
-      color: colors['gray5']
-    },
     '&:focus': {
       outline: 'none',
       boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
@@ -89,9 +82,7 @@ const fwTheme: Theme = {
     outline: {
       boxShadow: 'inset 0 0 0 1px #4b4b4b',
       '&:hover': {
-        bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none',
-        color: 'white',
         textDecoration: 'none'
       }
     },
@@ -106,15 +97,12 @@ const fwTheme: Theme = {
       p: 'none',
       boxShadow: 'inset 0 0 0 1px #4b4b4b',
       '&:hover': {
-        bg: 'rgba(255, 255, 255, 0.2)',
         boxShadow: 'none',
-        color: 'white',
         textDecoration: 'none'
       }
     },
     text: {
       '&:hover': {
-        color: 'white',
         textDecoration: 'underline'
       }
     }

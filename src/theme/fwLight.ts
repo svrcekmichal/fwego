@@ -1,0 +1,47 @@
+import merge from 'lodash/merge'
+import cloneDeep from 'lodash/cloneDeep'
+import type { Theme } from './theme'
+import fwTheme, { colors } from './fw'
+
+const lightOverrides = {
+  text: {
+    color: 'black'
+  },
+  heading: {
+    color: 'black'
+  },
+  input: {
+    bg: 'white',
+    color: 'black',
+    boxShadow: `0px 0px 0px 1px ${colors['gray5']} inset`,
+    '::placeholder': {
+      color: 'black'
+    }
+  },
+  variants: {
+    outline: {
+      color: 'black',
+      '&:hover': {
+        color: 'black',
+        bg: 'rgba(0, 0, 0, 0.2)'
+      }
+    },
+    icon: {
+      color: 'black',
+      '&:hover': {
+        color: 'black',
+        bg: 'rgba(0, 0, 0, 0.2)'
+      }
+    },
+    text: {
+      color: 'black',
+      '&:hover': {
+        color: 'black'
+      }
+    }
+  }
+}
+
+const fwLightTheme: Theme = merge(cloneDeep(fwTheme), lightOverrides)
+
+export default fwLightTheme

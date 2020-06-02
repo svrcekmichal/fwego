@@ -22,6 +22,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   alignSelf?: ResponsiveString
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
   bg?: ResponsiveString
+  backdropFilter?: ResponsiveString
   backgroundImage?: ResponsiveString
   backgroundPosition?: ResponsiveString
   backgroundSize?: ResponsiveString
@@ -63,6 +64,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   minWidth?: ResponsiveSpace
   maxHeight?: ResponsiveSpace
   maxWidth?: ResponsiveSpace
+  objectFit?: ResponsiveSpace
   order?: ResponsiveProp
   overflow?: ResponsiveOverflow
   overflowX?: ResponsiveOverflow

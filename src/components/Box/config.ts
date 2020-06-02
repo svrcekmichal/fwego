@@ -20,6 +20,9 @@ const styleConfig: StyleConfig = {
   backgroundImage: {
     name: 'background-image'
   },
+  backdropFilter: {
+    name: 'backdrop-filter'
+  },
   backgroundPosition: {
     name: 'background-position'
   },
@@ -175,6 +178,9 @@ const styleConfig: StyleConfig = {
   maxWidth: {
     name: 'max-width',
     transformer: sizeTransformer
+  },
+  objectFit: {
+    name: 'object-fit'
   },
   opacity: {
     name: 'opacity'

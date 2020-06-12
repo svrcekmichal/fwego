@@ -272,6 +272,9 @@ const styleConfig: StyleConfig = {
     name: 'top',
     transformer: sizeTransformer
   },
+  transform: {
+    name: 'transform'
+  },
   transition: {
     name: 'transition'
   },

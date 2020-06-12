@@ -90,6 +90,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   textOverflow?: ResponsiveString
   textShadow?: ResponsiveString
   top?: ResponsiveSize
+  transform: ResponsiveString
   transition?: ResponsiveString
   whiteSpace?: ResponsiveString
   width?: ResponsiveSize

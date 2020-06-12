@@ -1,10 +1,5 @@
 import type { Size } from './Box'
-import type {
-  FontSize,
-  FontSizes,
-  FontWeight,
-  FontWeights
-} from '../../theme/fonts'
+import type { FontSize, FontWeight, FontWeights } from '../../theme/fonts'
 import type { Space, Spaces } from '../../theme/spaces'
 import type { Theme } from '../../theme/theme'
 
@@ -44,18 +39,15 @@ export function spaceTransformer(
   return toSpaceUnit(propertyValue, theme.spaces)
 }
 
-export function toFontSizeUnit(
-  fontSize: FontSize,
-  fontSizes: FontSizes
-): string {
-  return fontSizes[fontSize]
+export function toFontSizeUnit(fontSize: FontSize, theme: Theme): string {
+  return theme.fontSizes[fontSize] || toSizeUnit(fontSize)
 }
 
 export function fontSizeTransformer(
   propertyValue: FontSize,
   theme: Theme
 ): string {
-  return toFontSizeUnit(propertyValue, theme.fontSizes)
+  return toFontSizeUnit(propertyValue, theme)
 }
 
 export function toFontWeightUnit(

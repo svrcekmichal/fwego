@@ -89,11 +89,18 @@ const styleConfig: StyleConfig = {
     name: 'color',
     transformer: colorTransformer
   },
+  columnGap: {
+    name: 'column-gap',
+    transformer: spaceTransformer
+  },
   cursor: {
     name: 'cursor'
   },
   display: {
     name: 'display'
+  },
+  filter: {
+    name: 'filter'
   },
   flex: {
     name: 'flex'
@@ -121,9 +128,15 @@ const styleConfig: StyleConfig = {
     name: 'font-weight',
     transformer: fontWeightTransformer
   },
+  gridTemplateColumns: {
+    name: 'grid-template-columns'
+  },
   height: {
     name: 'height',
     transformer: sizeTransformer
+  },
+  lineClamp: {
+    name: 'line-clamp'
   },
   lineHeight: {
     name: 'line-height'
@@ -234,6 +247,10 @@ const styleConfig: StyleConfig = {
   right: {
     name: 'right',
     transformer: sizeTransformer
+  },
+  rowGap: {
+    name: 'row-gap',
+    transformer: spaceTransformer
   },
   size: {
     name: 'font-size',

@@ -38,8 +38,10 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   boxSizing?: ResponsiveString
   // should be ResponsiveString but conflicts with HTMLAttributes
   color?: FixMe
+  columnGap?: ResponsiveSpace
   cursor?: ResponsiveString
   display?: ResponsiveString
+  filter?: ResponsiveString
   flex?: ResponsiveProp
   flexDirection?: ResponsiveString
   flexWrap?: ResponsiveString
@@ -47,11 +49,13 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   fwcss?: { [key: string]: string }
   fwelement?: string
   fontFamily?: ResponsiveString
-  fontSize?: ResponsiveFontSize
+  fontSize?: ResponsiveFontSize | ResponsiveSize
   fontWeight?: FontWeight
+  gridTemplateColumns?: ResponsiveString
   height?: ResponsiveSize
   justifyContent?: ResponsiveString
   left?: ResponsiveSize
+  lineClamp?: ResponsiveString
   lineHeight?: ResponsiveProp
   m?: ResponsiveSpace
   mt?: ResponsiveSpace
@@ -79,7 +83,8 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   pointerEvents?: ResponsiveString
   position?: ResponsiveString
   right?: ResponsiveSize
-  size?: ResponsiveFontSize
+  rowGap?: ResponsiveSpace
+  size?: ResponsiveFontSize | ResponsiveSize
   textAlign?: ResponsiveString
   textDecoration?: ResponsiveString
   textOverflow?: ResponsiveString

@@ -1,19 +1,21 @@
 import createEmotion from 'create-emotion'
+import type { Emotion } from 'create-emotion'
 
 interface CreateEmotionConfig {
   key: string
   container?: HTMLElement
 }
 
-function createEmotionInstance() {
+function createEmotionInstance(): Emotion {
   const config: CreateEmotionConfig = {
     key: 'fwego'
   }
 
-  config.container = document.createElement('div')
-
-  const head = document.head
-  head.insertBefore(config.container, head.firstChild)
+  if (typeof document !== 'undefined') {
+    config.container = document.createElement('div')
+    const head = document.head
+    head.insertBefore(config.container, head.firstChild)
+  }
 
   return createEmotion(config)
 }

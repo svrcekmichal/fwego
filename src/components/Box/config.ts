@@ -59,6 +59,9 @@ const styleConfig: StyleConfig = {
     name: 'border-radius',
     transformer: sizeTransformer
   },
+  borderStyle: {
+    name: 'border-style'
+  },
   borderTopLeftRadius: {
     name: 'border-top-left-radius',
     transformer: sizeTransformer
@@ -73,6 +76,10 @@ const styleConfig: StyleConfig = {
   },
   borderBottomRightRadius: {
     name: 'border-bottom-right-radius',
+    transformer: sizeTransformer
+  },
+  borderWidth: {
+    name: 'border-width',
     transformer: sizeTransformer
   },
   bottom: {
@@ -267,6 +274,9 @@ const styleConfig: StyleConfig = {
   },
   textShadow: {
     name: 'text-shadow'
+  },
+  textTransform: {
+    name: 'text-transform'
   },
   top: {
     name: 'top',

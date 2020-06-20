@@ -28,11 +28,14 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   backgroundSize?: ResponsiveString
   border?: ResponsiveString
   borderCollapse?: ResponsiveString
+  borderColor?: ResponsiveString
   borderRadius?: ResponsiveString
+  borderStyle?: ResponsiveString
   borderTopLeftRadius?: ResponsiveSize
   borderTopRightRadius?: ResponsiveSize
   borderBottomLeftRadius?: ResponsiveSize
   borderBottomRightRadius?: ResponsiveSize
+  borderWidth?: ResponsiveString
   bottom?: ResponsiveSize
   boxShadow?: ResponsiveString
   boxSizing?: ResponsiveString
@@ -89,8 +92,9 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   textDecoration?: ResponsiveString
   textOverflow?: ResponsiveString
   textShadow?: ResponsiveString
+  textTransform?: ResponsiveString
   top?: ResponsiveSize
-  transform: ResponsiveString
+  transform?: ResponsiveString
   transition?: ResponsiveString
   whiteSpace?: ResponsiveString
   width?: ResponsiveSize

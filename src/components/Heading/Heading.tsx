@@ -42,11 +42,6 @@ export const headingConfig: {
   }
 }
 
-const fwcss = {
-  m: 'none',
-  weight: 'bold'
-}
-
 export const Heading = forwardRef(
   (
     { children, level = '1', ...props }: HeadingProps,
@@ -59,8 +54,9 @@ export const Heading = forwardRef(
         as={as}
         size={size}
         ref={ref}
-        fwcss={fwcss}
+        m="none"
         fwelement="heading"
+        weight="bold"
         {...props}
       >
         {children}

@@ -65,9 +65,12 @@ export function fontWeightTransformer(
 }
 
 export function isValidColor(color: string): boolean {
-  const s = new Option().style
-  s.color = color
-  return s.color != ''
+  if (typeof Option !== 'undefined') {
+    const style = new Option().style
+    style.color = color
+    return style.color != ''
+  }
+  return true
 }
 
 export function colorTransformer(propertyValue: string, theme: Theme): string {

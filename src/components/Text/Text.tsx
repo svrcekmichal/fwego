@@ -8,15 +8,15 @@ export interface TextProps extends BoxProps {
   baseline?: boolean
 }
 
-const fwcss = {
-  m: 'none',
-  size: 'medium',
-  weight: 'normal'
-}
-
 export const Text = forwardRef(
   (
-    { baseline = false, children, className, size, ...props }: TextProps,
+    {
+      baseline = false,
+      children,
+      className,
+      size = 'medium',
+      ...props
+    }: TextProps,
     ref: React.Ref<HTMLElement>
   ) => {
     const baselineCls = useBaselineStyles(baseline, size)
@@ -26,9 +26,9 @@ export const Text = forwardRef(
         as="span"
         className={cx(baselineCls, className)}
         ref={ref}
-        size={size}
-        fwcss={fwcss}
         fwelement="text"
+        size={size}
+        weight="normal"
         {...props}
       >
         {children}

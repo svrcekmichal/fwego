@@ -148,6 +148,9 @@ const styleConfig: StyleConfig = {
   lineHeight: {
     name: 'line-height'
   },
+  listStyle: {
+    name: 'list-style'
+  },
   justifyContent: {
     name: 'justify-content'
   },
@@ -287,6 +290,9 @@ const styleConfig: StyleConfig = {
   },
   transition: {
     name: 'transition'
+  },
+  userSelect: {
+    name: 'user-select'
   },
   weight: {
     name: 'font-weight',

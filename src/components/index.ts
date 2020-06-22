@@ -2,6 +2,14 @@ export { Box } from './Box/Box'
 export type { BoxProps } from './Box/Box'
 export { Button } from './Button/Button'
 export type { ButtonProps } from './Button/Button'
+export {
+  Combobox,
+  ComboboxInput,
+  ComboboxPopover,
+  ComboboxList,
+  ComboboxOption,
+  ComboboxOptionText
+} from './Combobox/Combobox'
 export { Flex } from './Flex/Flex'
 export { Heading } from './Heading/Heading'
 export type { HeadingProps } from './Heading/Heading'

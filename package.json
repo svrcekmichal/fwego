@@ -1,6 +1,6 @@
 {
   "name": "fwego",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Ben Hansen <bnhansn@gmail.com>",
   "description": "Fwego UI",
   "repository": "loopsocial/fwego",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@reach/combobox": "^0.10.4",
     "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^7.1.3",
     "@storybook/addon-actions": "^5.3.18",
@@ -68,6 +69,7 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
+    "@reach/combobox": "^0.10.4",
     "create-emotion": "^10.0.27",
     "emotion": "^10.0.27",
     "lodash": "^4.17.15",

@@ -14,9 +14,9 @@ export type ResponsiveString = string | Array<string>
 export type ResponsiveProp = string | number | Array<string> | Array<number>
 export type Overflow = 'visible' | 'hidden' | 'scroll' | 'auto'
 export type ResponsiveOverflow = Overflow | Array<Overflow>
-type FixMe = any
 
-export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
+export interface BoxProps
+  extends Omit<React.HTMLAttributes<HTMLElement>, 'color'> {
   alignContent?: ResponsiveString
   alignItems?: ResponsiveString
   alignSelf?: ResponsiveString
@@ -39,16 +39,16 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   bottom?: ResponsiveSize
   boxShadow?: ResponsiveString
   boxSizing?: ResponsiveString
-  // should be ResponsiveString but conflicts with HTMLAttributes
-  color?: FixMe
+  color?: ResponsiveString
   columnGap?: ResponsiveSpace
   cursor?: ResponsiveString
   display?: ResponsiveString
   filter?: ResponsiveString
   flex?: ResponsiveProp
   flexDirection?: ResponsiveString
-  flexWrap?: ResponsiveString
   flexFlow?: ResponsiveString
+  flexShrink?: ResponsiveString
+  flexWrap?: ResponsiveString
   fwcss?: { [key: string]: string }
   fwelement?: string
   fontFamily?: ResponsiveString
@@ -60,6 +60,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   left?: ResponsiveSize
   lineClamp?: ResponsiveString
   lineHeight?: ResponsiveProp
+  listStyle?: ResponsiveString
   m?: ResponsiveSpace
   mt?: ResponsiveSpace
   mr?: ResponsiveSpace
@@ -96,12 +97,13 @@ export interface BoxProps extends React.HTMLAttributes<HTMLElement> {
   top?: ResponsiveSize
   transform?: ResponsiveString
   transition?: ResponsiveString
+  userSelect?: ResponsiveString
+  variant?: string
   whiteSpace?: ResponsiveString
   width?: ResponsiveSize
   weight?: FontWeight | Array<FontWeight>
   wordBreak?: ResponsiveString
   wordWrap?: ResponsiveString
-  variant?: string
   zIndex?: ResponsiveProp
 }
 

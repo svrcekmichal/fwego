@@ -60,7 +60,15 @@ const fwTheme: Theme = {
     }
   },
   input: {
-    borderRadius: '12px',
+    borderRadius: 12,
+    fontFamily: fontFamily,
+    '&:focus': {
+      outline: 'none',
+      boxShadow: `0px 0px 0px 2px ${colors['primary']} inset`
+    }
+  },
+  select: {
+    borderRadius: 12,
     fontFamily: fontFamily,
     '&:focus': {
       outline: 'none',
@@ -75,9 +83,22 @@ const fwTheme: Theme = {
     fontFamily: fontFamily,
     weight: 'bold'
   },
+  label: {
+    fontFamily: fontFamily,
+    weight: 'bold'
+  },
+  modalContent: {
+    borderRadius: 6
+  },
   variants: {
     primary: {
       backgroundImage: colors['primaryGradient']
+    },
+    secondary: {
+      bg: colors['gray3'],
+      '&:hover': {
+        bg: '#5c5c5c'
+      }
     },
     outline: {
       boxShadow: 'inset 0 0 0 1px #4b4b4b',

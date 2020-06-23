@@ -21,11 +21,15 @@ export const FWThemeDark: React.FC<{}> = () => {
       <Stack>
         <Inline>
           <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
           <Button variant="outline">Outline</Button>
           <Button variant="text">Text Button</Button>
         </Inline>
         <Inline>
           <Button disabled variant="primary">
+            Disabled
+          </Button>
+          <Button disabled variant="secondary">
             Disabled
           </Button>
           <Button disabled variant="outline">
@@ -54,11 +58,15 @@ export const FWThemeLight: React.FC<{}> = () => {
       <Stack bg="white">
         <Inline>
           <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
           <Button variant="outline">Outline</Button>
           <Button variant="text">Text Button</Button>
         </Inline>
         <Inline>
           <Button disabled variant="primary">
+            Disabled
+          </Button>
+          <Button disabled variant="secondary">
             Disabled
           </Button>
           <Button disabled variant="outline">

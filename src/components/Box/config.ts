@@ -211,6 +211,9 @@ const styleConfig: StyleConfig = {
   order: {
     name: 'order'
   },
+  outline: {
+    name: 'outline'
+  },
   overflow: {
     name: 'overflow'
   },

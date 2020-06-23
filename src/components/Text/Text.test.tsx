@@ -18,8 +18,7 @@ test('it uses default fwcss styles', () => {
       display: block;
       box-sizing: border-box;
       min-width: 0px;
-      margin: 0px;
-      font-weight: 400;
+      font-size: 16px;
     }
 
     <div>
@@ -44,8 +43,7 @@ test('it renders baseline text', () => {
       display: block;
       box-sizing: border-box;
       min-width: 0px;
-      margin: 0px;
-      font-weight: 400;
+      font-size: 16px;
     }
 
     .emotion-0:before {
@@ -81,9 +79,7 @@ test('it renders different baseline styles based on size prop', () => {
       display: block;
       box-sizing: border-box;
       min-width: 0px;
-      margin: 0px;
       font-size: 32px;
-      font-weight: 400;
     }
 
     .emotion-0:before {

@@ -10,6 +10,9 @@ const darkOverrides = {
   heading: {
     color: 'white'
   },
+  label: {
+    color: 'white'
+  },
   input: {
     bg: colors['blk1'],
     color: 'white',
@@ -17,6 +20,20 @@ const darkOverrides = {
     '::placeholder': {
       color: colors['gray5']
     }
+  },
+  select: {
+    bg: colors['blk1'],
+    color: 'white',
+    boxShadow: `0px 0px 0px 1px ${colors['gray3']} inset`,
+    '::placeholder': {
+      color: colors['gray5']
+    }
+  },
+  modal: {
+    bg: 'rgba(0, 0, 0, 0.5)'
+  },
+  modalContent: {
+    bg: colors['gray3']
   },
   variants: {
     outline: {

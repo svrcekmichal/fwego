@@ -74,6 +74,7 @@ export interface BoxProps
   maxWidth?: ResponsiveSpace
   objectFit?: ResponsiveSpace
   order?: ResponsiveProp
+  outline?: ResponsiveString
   overflow?: ResponsiveOverflow
   overflowX?: ResponsiveOverflow
   overflowY?: ResponsiveOverflow

@@ -10,7 +10,18 @@ const lightOverrides = {
   heading: {
     color: 'black'
   },
+  label: {
+    color: 'black'
+  },
   input: {
+    bg: 'white',
+    color: 'black',
+    boxShadow: `0px 0px 0px 1px ${colors['gray5']} inset`,
+    '::placeholder': {
+      color: 'black'
+    }
+  },
+  select: {
     bg: 'white',
     color: 'black',
     boxShadow: `0px 0px 0px 1px ${colors['gray5']} inset`,

@@ -97,7 +97,8 @@ const fwTheme: Theme = {
     secondary: {
       bg: colors['gray3'],
       '&:hover': {
-        bg: '#5c5c5c'
+        bg: '#5c5c5c',
+        textDecoration: 'none'
       }
     },
     outline: {

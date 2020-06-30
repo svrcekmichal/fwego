@@ -5,16 +5,15 @@ import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
 import { Text } from '../Text/Text'
 
-export interface RadioProps extends BoxProps {
+export interface CheckboxProps extends BoxProps {
   checked?: boolean
   children?: React.ReactNode
   defaultChecked?: boolean
   id: string
   name: string
-  value: string
 }
 
-export const Radio = forwardRef(
+export const Checkbox = forwardRef(
   (
     {
       checked,
@@ -26,9 +25,8 @@ export const Radio = forwardRef(
       onChange,
       size = 'medium',
       weight = 'normal',
-      value,
       ...props
-    }: RadioProps,
+    }: CheckboxProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
     const theme = useTheme()
@@ -46,6 +44,17 @@ export const Radio = forwardRef(
           css`
             input:checked ~ div {
               background: ${theme.colors.primary};
+              box-shadow: none;
+            }
+            input:checked ~ div:after {
+              content: '';
+              position: absolute;
+              width: 4px;
+              height: 8px;
+              border: solid white;
+              border-width: 0 2px 2px 0;
+              transform: translate3d(75%, 25%, 0) rotate(45deg);
+              box-sizing: content-box;
             }
           `
         )}
@@ -62,15 +71,15 @@ export const Radio = forwardRef(
           name={name}
           onChange={onChange}
           ref={ref}
-          type="radio"
-          value={value}
+          type="checkbox"
         />
         <Box
           width="16"
           height="16"
           borderRadius="50%"
-          boxShadow="inset 0px 0px 0px 1px white"
+          boxShadow="inset 0px 0px 0px 2px white"
           mr="xsmall"
+          position="relative"
           flexShrink="0"
         />
         <Text size={size} weight={weight}>
@@ -81,4 +90,4 @@ export const Radio = forwardRef(
   }
 )
 
-Radio.displayName = 'Radio'
+Checkbox.displayName = 'Checkbox'

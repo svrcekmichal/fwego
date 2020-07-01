@@ -118,6 +118,9 @@ const styleConfig: StyleConfig = {
   flexFlow: {
     name: 'flex-flow'
   },
+  flexGrow: {
+    name: 'flex-grow'
+  },
   flexShrink: {
     name: 'flex-shrink'
   },
@@ -296,6 +299,9 @@ const styleConfig: StyleConfig = {
   },
   userSelect: {
     name: 'user-select'
+  },
+  webkitAppearance: {
+    name: '-webkit-appearance'
   },
   weight: {
     name: 'font-weight',

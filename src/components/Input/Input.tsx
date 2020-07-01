@@ -11,7 +11,8 @@ const fwcss = {
   size: 'small',
   px: 'small',
   py: 'xsmall',
-  width: '100%'
+  width: '100%',
+  webkitAppearance: 'none'
 }
 
 export const Input = forwardRef(

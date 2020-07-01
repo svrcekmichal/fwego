@@ -47,6 +47,7 @@ export interface BoxProps
   flex?: ResponsiveProp
   flexDirection?: ResponsiveString
   flexFlow?: ResponsiveString
+  flexGrow?: ResponsiveString
   flexShrink?: ResponsiveString
   flexWrap?: ResponsiveString
   fwcss?: { [key: string]: string }
@@ -102,6 +103,7 @@ export interface BoxProps
   variant?: string
   whiteSpace?: ResponsiveString
   width?: ResponsiveSize
+  webkitAppearance?: ResponsiveString
   weight?: FontWeight | Array<FontWeight>
   wordBreak?: ResponsiveString
   wordWrap?: ResponsiveString

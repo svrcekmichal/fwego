@@ -64,7 +64,6 @@ export const ComboboxList = forwardRef(
         p="none"
         listStyle="none"
         userSelect="none"
-        fwelement="comboboxList"
         {...props}
       />
     )

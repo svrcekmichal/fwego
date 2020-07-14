@@ -14,7 +14,6 @@ import type {
 import { css } from 'emotion'
 import { Box } from '../Box/Box'
 import { Input } from '../Input/Input'
-import { useTheme } from '../../hooks'
 
 export const ComboboxInput = forwardRef(
   (
@@ -32,17 +31,14 @@ export const ComboboxPopover = forwardRef(
     props: ComboboxPopoverProps & React.HTMLAttributes<HTMLDivElement>,
     ref: React.Ref<HTMLDivElement>
   ) => {
-    const theme = useTheme()
     return (
       <Box
         as={ReachComboboxPopover}
         ref={ref}
-        bg="gray1"
-        borderRadius="12"
-        border={`1px solid ${theme.colors.gray3}`}
         overflow="hidden"
         mt="xsmall"
         py="xsmall"
+        fwelement="comboboxPopover"
         {...props}
       />
     )
@@ -64,6 +60,7 @@ export const ComboboxList = forwardRef(
         p="none"
         listStyle="none"
         userSelect="none"
+        fwelement="comboboxList"
         {...props}
       />
     )
@@ -77,7 +74,6 @@ export const ComboboxOption = forwardRef(
     props: ComboboxOptionProps & React.HTMLAttributes<HTMLLIElement>,
     ref: React.Ref<HTMLLIElement>
   ) => {
-    const theme = useTheme()
     return (
       <Box
         as={ReachComboboxOption}
@@ -85,12 +81,8 @@ export const ComboboxOption = forwardRef(
         cursor="pointer"
         px="small"
         py="xsmall"
+        fwelement="comboboxOption"
         className={css`
-          &:hover,
-          &[aria-selected='true'],
-          &[aria-selected='true']:hover {
-            background: ${theme.colors.gray2};
-          }
           [data-suggested-value] {
             font-weight: bold;
           }

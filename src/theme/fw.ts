@@ -90,6 +90,9 @@ const fwTheme: Theme = {
   modalContent: {
     borderRadius: 6
   },
+  comboboxPopover: {
+    borderRadius: 12
+  },
   variants: {
     primary: {
       backgroundImage: colors['primaryGradient']

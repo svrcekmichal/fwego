@@ -17,6 +17,9 @@ const styleConfig: StyleConfig = {
   alignSelf: {
     name: 'align-self'
   },
+  animation: {
+    name: 'animation'
+  },
   backgroundImage: {
     name: 'background-image'
   },
@@ -225,6 +228,9 @@ const styleConfig: StyleConfig = {
   },
   overflowY: {
     name: 'overflow-y'
+  },
+  overflowWrap: {
+    name: 'overflow-wrap'
   },
   p: {
     name: 'padding',

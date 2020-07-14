@@ -35,6 +35,19 @@ const darkOverrides = {
   modalContent: {
     bg: colors['gray3']
   },
+  comboboxPopover: {
+    bg: colors.gray1,
+    border: `1px solid ${colors.gray3}`
+  },
+  comboboxOption: {
+    color: 'inherit',
+    '&:hover': {
+      bg: colors.gray2
+    },
+    "&[aria-selected='true']": {
+      bg: colors.gray2
+    }
+  },
   variants: {
     outline: {
       '&:hover': {

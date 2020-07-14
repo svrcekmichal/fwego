@@ -20,6 +20,7 @@ export interface BoxProps
   alignContent?: ResponsiveString
   alignItems?: ResponsiveString
   alignSelf?: ResponsiveString
+  animation?: ResponsiveString
   as?: keyof JSX.IntrinsicElements | React.ComponentType<any>
   bg?: ResponsiveString
   backdropFilter?: ResponsiveString
@@ -74,11 +75,13 @@ export interface BoxProps
   maxHeight?: ResponsiveSpace
   maxWidth?: ResponsiveSpace
   objectFit?: ResponsiveSpace
+  opacity?: ResponsiveProp
   order?: ResponsiveProp
   outline?: ResponsiveString
   overflow?: ResponsiveOverflow
   overflowX?: ResponsiveOverflow
   overflowY?: ResponsiveOverflow
+  overflowWrap?: ResponsiveString
   p?: ResponsiveSpace
   pt?: ResponsiveSpace
   pr?: ResponsiveSpace

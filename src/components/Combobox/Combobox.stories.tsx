@@ -86,3 +86,37 @@ export const FWThemeDark: React.FC<{}> = () => {
     </FWThemeProvider>
   )
 }
+
+export const FWThemeLight: React.FC<{}> = () => {
+  return (
+    <FWThemeProvider theme="light">
+      <Combobox aria-label="hashtags">
+        <ComboboxInput placeholder="Search Hashtags" />
+        <ComboboxPopover>
+          <ComboboxList>
+            <ComboboxOption value="animals">
+              <Text color="inherit" size="small">
+                #<ComboboxOptionText />
+              </Text>
+            </ComboboxOption>
+            <ComboboxOption value="comedy">
+              <Text color="inherit" size="small">
+                #<ComboboxOptionText />
+              </Text>
+            </ComboboxOption>
+            <ComboboxOption value="gaming">
+              <Text color="inherit" size="small">
+                #<ComboboxOptionText />
+              </Text>
+            </ComboboxOption>
+            <ComboboxOption value="sports">
+              <Text color="inherit" size="small">
+                #<ComboboxOptionText />
+              </Text>
+            </ComboboxOption>
+          </ComboboxList>
+        </ComboboxPopover>
+      </Combobox>
+    </FWThemeProvider>
+  )
+}

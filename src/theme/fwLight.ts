@@ -29,6 +29,20 @@ const lightOverrides = {
       color: 'black'
     }
   },
+  comboboxPopover: {
+    bg: 'white',
+    border: `1px solid ${colors.gray5}`
+  },
+  comboboxOption: {
+    '&:hover': {
+      color: 'white',
+      bg: colors.primary
+    },
+    "&[aria-selected='true']": {
+      color: 'white',
+      bg: colors.primary
+    }
+  },
   variants: {
     outline: {
       color: 'black',

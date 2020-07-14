@@ -35,6 +35,10 @@ const darkOverrides = {
   modalContent: {
     bg: colors['gray3']
   },
+  comboboxPopover: {
+    bg: colors['gray1'],
+    borderColor: colors['gray3']
+  },
   variants: {
     outline: {
       '&:hover': {

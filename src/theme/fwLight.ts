@@ -29,6 +29,10 @@ const lightOverrides = {
       color: 'black'
     }
   },
+  comboboxPopover: {
+    bg: 'white',
+    borderColor: colors['gray5']
+  },
   variants: {
     outline: {
       color: 'black',

@@ -32,17 +32,17 @@ export const ComboboxPopover = forwardRef(
     props: ComboboxPopoverProps & React.HTMLAttributes<HTMLDivElement>,
     ref: React.Ref<HTMLDivElement>
   ) => {
-    const theme = useTheme()
     return (
       <Box
         as={ReachComboboxPopover}
         ref={ref}
-        bg="gray1"
         borderRadius="12"
-        border={`1px solid ${theme.colors.gray3}`}
+        borderWidth="1"
+        borderStyle="solid"
         overflow="hidden"
         mt="xsmall"
         py="xsmall"
+        fwelement="comboboxPopover"
         {...props}
       />
     )
@@ -64,6 +64,7 @@ export const ComboboxList = forwardRef(
         p="none"
         listStyle="none"
         userSelect="none"
+        fwelement="comboboxList"
         {...props}
       />
     )
@@ -85,6 +86,7 @@ export const ComboboxOption = forwardRef(
         cursor="pointer"
         px="small"
         py="xsmall"
+        fwelement="comboboxOption"
         className={css`
           &:hover,
           &[aria-selected='true'],

@@ -1,6 +1,6 @@
 {
   "name": "fwego",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "author": "Ben Hansen <bnhansn@gmail.com>",
   "description": "Fwego UI",
   "repository": "loopsocial/fwego",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
+    "@emotion/core": "^10.0.28",
     "@reach/combobox": "^0.10.4",
     "@reach/dialog": "^0.10.4",
     "@rollup/plugin-commonjs": "^11.1.0",
@@ -44,8 +45,6 @@
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "babel-loader": "^8.1.0",
-    "create-emotion": "^10.0.27",
-    "emotion": "^10.0.27",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
@@ -70,10 +69,9 @@
     "typescript": "^3.8.3"
   },
   "peerDependencies": {
+    "@emotion/core": "^10.0.28",
     "@reach/combobox": "^0.10.4",
     "@reach/dialog": "^0.10.4",
-    "create-emotion": "^10.0.27",
-    "emotion": "^10.0.27",
     "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

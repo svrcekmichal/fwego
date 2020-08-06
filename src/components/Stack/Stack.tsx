@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React, { forwardRef } from 'react'
-import { css, cx } from '../../emotion'
+import { css, jsx } from '@emotion/core'
 import useSpace from '../../hooks/useSpace'
 import type { Space } from '../../theme/spaces'
 import { Box } from '../Box/Box'
@@ -11,19 +12,19 @@ export interface StackProps extends BoxProps {
 
 export const Stack = forwardRef(
   (
-    { children, className, space = 'medium', ...props }: StackProps,
+    { children, space = 'medium', ...props }: StackProps,
     ref: React.Ref<HTMLDivElement>
   ) => {
     const spacing = useSpace(space)
 
-    const cls = css`
+    const styles = css`
       > *:not(:last-child) {
         margin-bottom: ${spacing};
       }
     `
 
     return (
-      <Box ref={ref} className={cx(cls, className)} {...props}>
+      <Box ref={ref} css={styles} {...props}>
         {children}
       </Box>
     )

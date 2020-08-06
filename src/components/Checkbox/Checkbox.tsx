@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React, { forwardRef } from 'react'
-import { css, cx } from 'emotion'
+import { css, jsx } from '@emotion/core'
 import { useTheme } from '../../hooks'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
@@ -18,7 +19,6 @@ export const Checkbox = forwardRef(
     {
       checked,
       children,
-      className,
       defaultChecked,
       id,
       name,
@@ -39,25 +39,22 @@ export const Checkbox = forwardRef(
         // @ts-ignore
         htmlFor={id}
         m="0"
-        className={cx(
-          className,
-          css`
-            input:checked ~ div {
-              background: ${theme.colors.primary};
-              box-shadow: none;
-            }
-            input:checked ~ div:after {
-              content: '';
-              position: absolute;
-              width: 4px;
-              height: 8px;
-              border: solid white;
-              border-width: 0 2px 2px 0;
-              transform: translate3d(75%, 25%, 0) rotate(45deg);
-              box-sizing: content-box;
-            }
-          `
-        )}
+        css={css`
+          input:checked ~ div {
+            background: ${theme.colors.primary};
+            box-shadow: none;
+          }
+          input:checked ~ div:after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: translate3d(75%, 25%, 0) rotate(45deg);
+            box-sizing: content-box;
+          }
+        `}
         {...props}
       >
         <Box

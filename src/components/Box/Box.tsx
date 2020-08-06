@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React, { forwardRef } from 'react'
-import { cx } from '../../emotion'
+import { jsx } from '@emotion/core'
 import { useTheme } from '../../hooks'
 import { partitionStyleProps, combineCssProperties } from '../../utils'
 import type { FontSize, FontWeight } from '../../theme/fonts'
@@ -32,6 +33,10 @@ export interface BoxProps
   borderColor?: ResponsiveString
   borderRadius?: ResponsiveString
   borderStyle?: ResponsiveString
+  borderTop?: ResponsiveString
+  borderRight?: ResponsiveString
+  borderBottom?: ResponsiveString
+  borderLeft?: ResponsiveString
   borderTopLeftRadius?: ResponsiveSize
   borderTopRightRadius?: ResponsiveSize
   borderBottomLeftRadius?: ResponsiveSize
@@ -57,6 +62,7 @@ export interface BoxProps
   fontSize?: ResponsiveFontSize | ResponsiveSize
   fontWeight?: FontWeight
   gridTemplateColumns?: ResponsiveString
+  gridTemplateRows?: ResponsiveString
   height?: ResponsiveSize
   justifyContent?: ResponsiveString
   left?: ResponsiveSize
@@ -124,7 +130,6 @@ export const Box = forwardRef(
     {
       as = 'div',
       children,
-      className,
       fwcss = {},
       fwelement,
       variant,
@@ -146,7 +151,7 @@ export const Box = forwardRef(
       variantStyles = theme.variants[variant]
     }
 
-    const cls = combineCssProperties(
+    const styles = combineCssProperties(
       {
         ...fwBoxCss,
         ...fwcss,
@@ -159,7 +164,7 @@ export const Box = forwardRef(
     )
 
     return (
-      <Component ref={ref} className={cx(className, cls)} {...forwardedProps}>
+      <Component ref={ref} css={styles} {...forwardedProps}>
         {children}
       </Component>
     )

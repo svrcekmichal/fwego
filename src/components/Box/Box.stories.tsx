@@ -1,4 +1,6 @@
-import React, { useRef } from 'react'
+/** @jsx jsx */
+import React from 'react'
+import { css, jsx } from '@emotion/core'
 import { useTheme } from '../../hooks'
 import { FWThemeProvider } from '../../models/FWThemeProvider'
 import { Box, Inline, Flex, Text } from '../'
@@ -61,7 +63,7 @@ export const FWColors: React.FC<{}> = () => {
 
 export const ResponsiveGrid: React.FC<{}> = () => {
   return (
-    <>
+    <div>
       <Flex flexWrap="wrap" mb="medium" color="white">
         <Box
           bg="primary"
@@ -108,7 +110,7 @@ export const ResponsiveGrid: React.FC<{}> = () => {
           boxShadow="inset 0px 0px 0px 1px white"
         />
       </Flex>
-    </>
+    </div>
   )
 }
 

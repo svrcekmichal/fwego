@@ -1,4 +1,5 @@
-import { css } from '../../emotion'
+import { css } from '@emotion/core'
+import type { SerializedStyles } from '@emotion/core'
 import { useTheme } from '../../hooks'
 import type { Size } from '../Box/Box'
 import type { Theme } from '../../theme/theme'
@@ -14,7 +15,7 @@ function isFontSize(
 export default function useBaselineStyles(
   baseline: boolean,
   size: FontSize | Array<FontSize> | Size | Array<Size> = 'medium'
-): string | undefined {
+): SerializedStyles | undefined {
   const theme = useTheme()
 
   if (baseline) {

@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React, { forwardRef } from 'react'
-import { css, cx } from 'emotion'
+import { css, jsx } from '@emotion/core'
 import { useTheme } from '../../hooks'
 import { Box } from '../Box/Box'
 import type { BoxProps } from '../Box/Box'
@@ -19,7 +20,6 @@ export const Radio = forwardRef(
     {
       checked,
       children,
-      className,
       defaultChecked,
       id,
       name,
@@ -41,14 +41,11 @@ export const Radio = forwardRef(
         // @ts-ignore
         htmlFor={id}
         m="0"
-        className={cx(
-          className,
-          css`
-            input:checked ~ div {
-              background: ${theme.colors.primary};
-            }
-          `
-        )}
+        css={css`
+          input:checked ~ div {
+            background: ${theme.colors.primary};
+          }
+        `}
         {...props}
       >
         <Box

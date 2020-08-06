@@ -144,6 +144,9 @@ const styleConfig: StyleConfig = {
   gridTemplateColumns: {
     name: 'grid-template-columns'
   },
+  gridTemplateRows: {
+    name: 'grid-template-rows'
+  },
   height: {
     name: 'height',
     transformer: sizeTransformer

@@ -1,4 +1,6 @@
-import { css } from '../emotion'
+/** @jsx jsx */
+import { css } from '@emotion/core'
+import type { SerializedStyles } from '@emotion/core'
 import type { Theme } from '../theme/theme'
 
 type Props = { [key: string]: any }
@@ -79,7 +81,7 @@ export function combineCssProperties(
   styleProps: Props,
   styleConfig: StyleConfig,
   theme: Theme
-): string {
+): SerializedStyles {
   const psuedo: Array<[string, Props]> = []
   const regular: Array<[string, string]> = []
   for (const k in styleProps) {

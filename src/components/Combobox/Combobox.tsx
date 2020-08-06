@@ -1,3 +1,4 @@
+/** @jsx jsx */
 import React, { forwardRef } from 'react'
 import {
   ComboboxInput as ReachComboboxInput,
@@ -11,7 +12,7 @@ import type {
   ComboboxListProps,
   ComboboxOptionProps
 } from '@reach/combobox'
-import { css } from 'emotion'
+import { css, jsx } from '@emotion/core'
 import { Box } from '../Box/Box'
 import { Input } from '../Input/Input'
 
@@ -82,7 +83,7 @@ export const ComboboxOption = forwardRef(
         px="small"
         py="xsmall"
         fwelement="comboboxOption"
-        className={css`
+        css={css`
           [data-suggested-value] {
             font-weight: bold;
           }

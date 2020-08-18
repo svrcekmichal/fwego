@@ -172,6 +172,9 @@ const styleConfig: StyleConfig = {
   justifyContent: {
     name: 'justify-content'
   },
+  justifySelf: {
+    name: 'justify-self'
+  },
   left: {
     name: 'left',
     transformer: sizeTransformer
@@ -271,6 +274,9 @@ const styleConfig: StyleConfig = {
   pl: {
     name: 'padding-left',
     transformer: spaceTransformer
+  },
+  placeSelf: {
+    name: 'padding-self'
   },
   pointerEvents: {
     name: 'pointer-events'

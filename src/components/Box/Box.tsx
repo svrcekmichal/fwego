@@ -68,6 +68,7 @@ export interface BoxProps
   gridTemplateRows?: ResponsiveString
   height?: ResponsiveSize
   justifyContent?: ResponsiveString
+  justifySelf?: ResponsiveString
   left?: ResponsiveSize
   lineClamp?: ResponsiveString
   lineHeight?: ResponsiveProp
@@ -98,6 +99,7 @@ export interface BoxProps
   pl?: ResponsiveSpace
   py?: ResponsiveSpace
   px?: ResponsiveSpace
+  placeSelf?: ResponsiveSpace
   pointerEvents?: ResponsiveString
   position?: ResponsiveString
   right?: ResponsiveSize

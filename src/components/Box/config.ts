@@ -141,6 +141,15 @@ const styleConfig: StyleConfig = {
     name: 'font-weight',
     transformer: fontWeightTransformer
   },
+  gridArea: {
+    name: 'grid-area'
+  },
+  gridColumn: {
+    name: 'grid-column'
+  },
+  gridRow: {
+    name: 'grid-row'
+  },
   gridTemplateColumns: {
     name: 'grid-template-columns'
   },
@@ -162,6 +171,9 @@ const styleConfig: StyleConfig = {
   },
   justifyContent: {
     name: 'justify-content'
+  },
+  justifySelf: {
+    name: 'justify-self'
   },
   left: {
     name: 'left',
@@ -262,6 +274,9 @@ const styleConfig: StyleConfig = {
   pl: {
     name: 'padding-left',
     transformer: spaceTransformer
+  },
+  placeSelf: {
+    name: 'padding-self'
   },
   pointerEvents: {
     name: 'pointer-events'

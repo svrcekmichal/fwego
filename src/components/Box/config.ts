@@ -141,6 +141,15 @@ const styleConfig: StyleConfig = {
     name: 'font-weight',
     transformer: fontWeightTransformer
   },
+  gridArea: {
+    name: 'grid-area'
+  },
+  gridColumn: {
+    name: 'grid-column'
+  },
+  gridRow: {
+    name: 'grid-row'
+  },
   gridTemplateColumns: {
     name: 'grid-template-columns'
   },

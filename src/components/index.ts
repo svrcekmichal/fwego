@@ -20,6 +20,14 @@ export type { InlineProps } from './Inline/Inline'
 export { Input } from './Input/Input'
 export type { InputProps } from './Input/Input'
 export { Label } from './Label/Label'
+export {
+  Menu,
+  MenuList,
+  MenuButton,
+  MenuLink,
+  MenuItem,
+  MenuPopover
+} from './Menu/Menu'
 export { Modal, ModalContent } from './Modal/Modal'
 export { Radio } from './Radio/Radio'
 export type { RadioProps } from './Radio/Radio'

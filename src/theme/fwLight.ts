@@ -43,6 +43,23 @@ const lightOverrides = {
       bg: colors.primary
     }
   },
+  menuList: {
+    bg: 'white'
+  },
+  menuItem: {
+    color: 'black',
+    '&[data-selected]': {
+      color: 'white',
+      bg: colors.primary
+    }
+  },
+  menuLink: {
+    color: 'black',
+    '&[data-selected]': {
+      color: 'white',
+      bg: colors.primary
+    }
+  },
   variants: {
     outline: {
       color: 'black',

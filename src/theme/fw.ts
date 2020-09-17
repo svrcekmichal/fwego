@@ -93,6 +93,35 @@ const fwTheme: Theme = {
   comboboxPopover: {
     borderRadius: 12
   },
+  menuButton: {
+    border: 0,
+    bg: 'transparent',
+    cursor: 'pointer'
+  },
+  menuList: {
+    px: 'none',
+    py: 'xsmall',
+    borderRadius: 8,
+    border: 'none',
+    boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.3)'
+  },
+  menuItem: {
+    py: 'xsmall',
+    px: 'small',
+    size: 'small',
+    weight: 'medium',
+    fontFamily: fontFamily
+  },
+  menuLink: {
+    py: 'xsmall',
+    px: 'small',
+    size: 'small',
+    weight: 'medium',
+    fontFamily: fontFamily,
+    '&:hover': {
+      textDecoration: 'none'
+    }
+  },
   variants: {
     primary: {
       backgroundImage: colors['primaryGradient']

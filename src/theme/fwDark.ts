@@ -48,6 +48,26 @@ const darkOverrides = {
       bg: colors.gray2
     }
   },
+  menuButton: {
+    color: 'white'
+  },
+  menuList: {
+    bg: colors.gray2
+  },
+  menuItem: {
+    color: 'white',
+    bg: colors.gray2,
+    '&[data-selected]': {
+      bg: colors.gray3
+    }
+  },
+  menuLink: {
+    color: 'white',
+    bg: colors.gray2,
+    '&[data-selected]': {
+      bg: colors.gray3
+    }
+  },
   variants: {
     outline: {
       '&:hover': {
